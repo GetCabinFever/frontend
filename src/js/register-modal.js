@@ -14,13 +14,13 @@ export default class RegisterModal extends Component {
 	dataHandler(data){
 		console.log('data', data);
 		ajax({
-			url: 'https://www.cabinfever.herokuapp.com/register',
+			url: 'https://cabinfever.herokuapp.com/register',
 			type: 'POST',
 			data: data,
 			cache: false,
 			dataType: 'json',
-			processData: false,
-			contentType: false
+			// processData: false,
+			// contentType: false
 		}).then( (resp) => {
 			
 			console.log('response', resp);
@@ -41,9 +41,9 @@ export default class RegisterModal extends Component {
 		return(
 			<div>
 				<SimpleSerialForm onData={this.dataHandler}>
-					<input type="text" name="first-name" placeholder="First name" />
-					<input type="text" name="last-name" placeholder="Last name" />
-					<input type="text" name="street-address" placeholder="Street" />
+					<input type="text" name="first_name" placeholder="First name" />
+					<input type="text" name="last_name" placeholder="Last name" />
+					<input type="text" name="address" placeholder="Street" />
 					<input type="text" name="city" placeholder="City" />
 					<input type="text" name="state" placeholder="State ex. GA" />
 					<input type="text" name="zip" placeholder="ZIP ex. 30303" />
