@@ -11,13 +11,16 @@ import SimpleSerialForm from 'react-simple-serial-form';
 
 export default class RegisterModal extends Component {
 	
-	dataHandler(){
+	dataHandler(data){
+		console.log('data', data);
 		ajax({
-			url: ' B A C K - E N D  U R L ',
+			url: 'https://www.cabinfever.herokuapp.com/register',
 			type: 'POST',
-			data: user,
+			data: data,
 			cache: false,
 			dataType: 'json',
+			processData: false,
+			contentType: false
 		}).then( (resp) => {
 			
 			console.log('response', resp);
