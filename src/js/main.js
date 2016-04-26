@@ -10,15 +10,11 @@ export default class Main extends Component {
 		return(
 			<div className="main">
 				<nav>
+	
+					<Link to="/login"> Log In </Link>
 					
-					<SimpleSerialForm>
-						<h3>Log In</h3>
+					<Link to="/register"> Register </Link>
 
-					</SimpleSerialForm>
-					
-					<h3>Register</h3>
-					<Link to="/create-new-listing">Create New Listing</Link>
-					<h3>About</h3>
 				</nav>
 			</div>
 		)

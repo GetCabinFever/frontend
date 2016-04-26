@@ -21,11 +21,9 @@ export default class RegisterModal extends Component {
 			dataType: 'json',
 			// processData: false,
 			// contentType: false
-		}).then( (resp) => {
-			
-			console.log('response', resp);
-			
-			if (resp.email) { 
+		}).then( (response) => {
+			console.log('register response--->', response);
+			if (response.email) { 
 				hashHistory.push('/dashboard');
 			} else {
 				hashHistory.push('/');
@@ -41,16 +39,16 @@ export default class RegisterModal extends Component {
 		return(
 			<div>
 				<SimpleSerialForm onData={this.dataHandler}>
-					<input type="text" name="first_name" placeholder="First name" />
-					<input type="text" name="last_name" placeholder="Last name" />
-					<input type="text" name="address" placeholder="Street" />
-					<input type="text" name="city" placeholder="City" />
-					<input type="text" name="state" placeholder="State ex. GA" />
-					<input type="text" name="zip" placeholder="ZIP ex. 30303" />
-					<input type="email" name="email" placeholder="Email ex. cabin404@gmail.com" />
-					<input type="tel" name="phone" placeholder="Phone number" />
-					<input type="date" name="dob" />
-					<input type="password" name="password" placeholder="Password" />
+					<input type="text"     name="first_name" placeholder="First name"                   />
+					<input type="text"     name="last_name"  placeholder="Last name"                    />
+					<input type="text"     name="address"    placeholder="Street"                       />
+					<input type="text"     name="city"       placeholder="City"                         />
+					<input type="text"     name="state"      placeholder="State ex. GA"                 />
+					<input type="text"     name="zip"        placeholder="ZIP ex. 30303"                />
+					<input type="email"    name="email"      placeholder="Email ex. cabin404@gmail.com" />
+					<input type="tel"      name="phone"      placeholder="Phone number"                 />
+					<input type="date"     name="dob"        placeholder=" "                            />
+					<input type="password" name="password"   placeholder="Password"                     />
 
 					<button>Register</button>
 				</SimpleSerialForm>
