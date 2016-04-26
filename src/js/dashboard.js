@@ -1,9 +1,21 @@
 // Javascript Entry Point
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
+import ajaxSetup from 'jquery';
 import { Router, Route, hashHistory, IndexRoute, Link  } from 'react-router';
+import Cookies from 'js-cookie';
+
+let currentUser;
 
 export default class Dashboard extends Component {
+
+	logoutHandler(){
+		Cookies.remove('currentUser');
+		ajaxSetup({
+			headers: { 'auth-token': ' ' }
+		});
+		hashHistory.push('/');
+	}
 
 	render(){
 		return(
@@ -15,7 +27,7 @@ export default class Dashboard extends Component {
 				<button>Profile Information</button>
 				<button>All Property Listings</button>
 				<button>Contact Us</button>
-				<Link to="/">Log Out</Link>
+				<button onClick={::this.logoutHandler}>Log Out</button>
 			</div>
 		)
 	}
