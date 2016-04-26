@@ -9,12 +9,7 @@ import Dashboard from './dashboard';
 import SimpleSerialForm from 'react-simple-serial-form';
 import Cookies from 'js-cookie';
 
-// let currentUser;
-
 export default class LoginModal extends Component {
-
-	// //Declares the user to be on the logged in page
-	// let currentUser = null;
 
 	dataHandler(loginInfo){
 		ajax({
@@ -24,20 +19,23 @@ export default class LoginModal extends Component {
 			cache: false,
 			dataType: 'json',
 		}).then((response)=>{
+			// successs
 			console.log('login response--->', response);
-			if (response.user.email) {
+			// if (response.user.email) {
 				Cookies.set('currentUser', response.user.auth_token, {expires: 1});
 				ajaxSetup({
 					headers: { 'X-Auth-Token': response.user.auth_token }
 				})
 				console.log('auth-token--->', response.user.auth_token);
 				hashHistory.push('/dashboard');
-			} else {
-				console.log('unsuccessful login--->', response);
-				alert("Log-in failed. Please try again.");
-				hashHistory.push('/');
-			}
-		})
+			// } else {
+			// 	console.log('unsuccessful login--->', response);
+			// 	// alert("Log-in failed. Please try again.");
+			// 	// hashHistory.push('/');
+			// }
+		}).fail(error => {
+			console.log('failed to log in');
+		});
 	}
 
 	render(){

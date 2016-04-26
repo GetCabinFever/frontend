@@ -1,7 +1,8 @@
 import React, { Component }  from 'react';
 import ReactDOM from 'react-dom';
 import { Router, Route, hashHistory, IndexRoute } from 'react-router';
-import { ajax } from 'jquery';
+import { ajax, ajaxSetup } from 'jquery';
+import Cookies from 'js-cookie';
 import Heading from './heading';
 import Main from './main';
 import CreateNewListing from './create-new-listing';
@@ -24,6 +25,11 @@ export default class RegisterModal extends Component {
 		}).then( (response) => {
 			console.log('register response--->', response);
 			if (response.email) { 
+				Cookies.set('currentUser', response.user.auth_token, { expires: 1 });
+				ajaxSetup({
+					headers: { 'X-Auth-Token': response.user.auth_token }
+				})
+				console.log('currentUser cookies--->', currentUser);
 				hashHistory.push('/dashboard');
 			} else {
 				hashHistory.push('/');
