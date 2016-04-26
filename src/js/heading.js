@@ -7,10 +7,16 @@ export default class Heading extends Component {
 
 	render(){
 		return(
-			<div>
-				<h1>Cabin Fever Heading</h1>
+			<div className="heading">
+				<h1>*****CabinFever*****</h1>
+				
+				<h1>*****MAIN PAGE*****</h1>
+				
 				{this.props.children}
-				<footer>Footer</footer>
+				
+				<img src="http://cdn2.hubspot.net/hub/95659/file-28152120-jpg/images/cabins-in-ga1.jpg" />
+				
+				<footer>*****Footer*****</footer>
 			</div>
 		)
 	}

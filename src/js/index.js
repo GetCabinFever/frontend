@@ -7,16 +7,16 @@ import Main from './main';
 import CreateNewListing from './create-new-listing';
 import Dashboard from './dashboard';
 import RegisterModal from './register-modal';
+import LoginModal from './login-modal';
 
 ReactDOM.render((
 	<Router history={hashHistory}>
-		<Route path="/" >
+		<Route path="/" component={Heading}>
 			<IndexRoute component={Main} />
 			<Route path="/register" component={RegisterModal} />
+			<Route path="/login" component={LoginModal} />
 			<Route path="/create-new-listing" component={CreateNewListing} />
 			<Route path="/dashboard" component={Dashboard} />
 		</Route>
 	</Router>
 	), document.querySelector('.app'));
-
-//component={Heading} add to line 13
