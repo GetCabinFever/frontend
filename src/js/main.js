@@ -16,6 +16,9 @@ export default class Main extends Component {
 					<Link to="/register"> Register </Link>
 
 				</nav>
+
+				<img src="http://cdn2.hubspot.net/hub/95659/file-28152120-jpg/images/cabins-in-ga1.jpg" />
+				
 			</div>
 		)
 	}
