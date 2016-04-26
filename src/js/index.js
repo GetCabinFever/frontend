@@ -10,7 +10,7 @@ import RegisterModal from './register-modal';
 
 ReactDOM.render((
 	<Router history={hashHistory}>
-		<Route path="/" >
+		<Route path="/" component={Heading}>
 			<IndexRoute component={Main} />
 			<Route path="/register" component={RegisterModal} />
 			<Route path="/create-new-listing" component={CreateNewListing} />
