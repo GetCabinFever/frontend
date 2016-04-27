@@ -5,11 +5,15 @@ import { ajax } from 'jquery';
 
 export default class GenerateNew extends Component {
 
+	ajax({
+
+
+	})
 	render() {
 
 		return (
 			<div>
-				<div className="top">
+				<div className="barbies">
 					<div className="hero-image"></div>
 					<div className="title"></div>	
 					<div className="property-description"></div>
