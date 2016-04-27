@@ -17,12 +17,12 @@ export default class CreateNewListing extends Component {
 	}
 
 	dropHandler([file]){
-		console.log('file in drophandler', file);
+		// console.log('file in drophandler', file);
 		this.setState({
 			preview: file.preview
 		});
 		this.file = file;
-		console.log('file attached to this.file drophandler', this.file);
+		// console.log('file attached to this.file drophandler', this.file);
 	}
 
 	dataHandler(newRegister) {
@@ -32,65 +32,8 @@ export default class CreateNewListing extends Component {
 			let val = newRegister[key];
 			data.append(key, val);
 			data.append('image', this.file);
-
 		})
 
-		// data.append('title_of_page', newRegister.title_of_page);
-		// data.append('address', newRegister.address);
-		// data.append('city', newRegister.city);
-		// data.append('state', newRegister.state);
-		// data.append('zip', newRegister.zip);
-		// data.append('description_of_listing', newRegister.description_of_listing);
-		// data.append('contact_host_email', newRegister.contact_host_email);
-		// data.append('booking_url', newRegister.booking_url);
-		// data.append('image', this.file);
-		// data.append('accommodates', newRegister.accommodates);
-		// data.append('bedrooms', newRegister.bedrooms);
-		// data.append('beds', newRegister.beds);
-		// data.append('bathrooms', newRegister.bathrooms);
-		// data.append('check_in', newRegister.check_in);
-		// data.append('check_out', newRegister.check_out);
-		// data.append('property_type', newRegister.property_type);
-		// data.append('house_rules', newRegister.house_rules);
-		// // --------- ammeneties start ---------
-		// data.append('kitchen', newRegister.kitchen);
-		// data.append('internet', newRegister.internet);
-		// data.append('tv', newRegister.tv);
-		// data.append('essentials', newRegister.essentials);
-		// data.append('shower_essentials', newRegister.shower_essentials);
-		// data.append('heating', newRegister.heating);
-		// data.append('airconditioning', newRegister.airconditioning);
-		// data.append('washer', newRegister.washer);
-		// data.append('dryer', newRegister.dryer);
-		// data.append('dishwasher', newRegister.dishwasher);
-		// data.append('free_parking', newRegister.free_parking);
-		// data.append('cable', newRegister.cable);
-		// data.append('satellite', newRegister.satellite);
-		// data.append('pets', newRegister.pets);
-		// data.append('kid_friendly', newRegister.kid_friendly);
-		// data.append('events', newRegister.events);
-		// data.append('smoking', newRegister.smoking);
-		// data.append('wheelchair_accessible', newRegister.wheelchair_accessible);
-		// data.append('elevator', newRegister.elevator);
-		// data.append('fireplace', newRegister.fireplace);
-		// data.append('intercom', newRegister.intercom);
-		// data.append('doorman', newRegister.doorman);
-		// data.append('pool', newRegister.pool);
-		// data.append('hottub', newRegister.hottub);
-		// data.append('gym', newRegister.gym);
-		// data.append('hangers', newRegister.hangers);
-		// data.append('iron', newRegister.iron);
-		// data.append('hair_dryer', newRegister.hair_dryer);
-		// data.append('workstation', newRegister.workstation);
-		// data.append('billiards', newRegister.billiards);
-		// // --------- ammeneties end ---------
-		// data.append('the_space', newRegister.the_space);
-		// data.append('guest_access', newRegister.guest_access);
-		// data.append('interaction_with_guests', newRegister.interaction_with_guests);
-		// data.append('interaction_with_guests', newRegister.interaction_with_guests);
-		// data.append('the_area', newRegister.the_area);
-		// data.append('other_things_to_note', newRegister.other_things_to_note);
-		// data.append('base_price', newRegister.base_price);
 
 		ajax({
 			url: 'https://cabinfever.herokuapp.com/residences',
@@ -100,7 +43,8 @@ export default class CreateNewListing extends Component {
 			dataType: 'json',
 			processData: false,
 			contentType: false
-		}).then ( response => { console.log(response)
+		}).then ( response => { 
+			console.log(response)
 		}).then(hashHistory.push('/generate_new'));
 	}
 
@@ -504,3 +448,65 @@ export default class CreateNewListing extends Component {
 	}
 
 }
+
+
+		// data.append('title_of_page', newRegister.title_of_page);
+		// data.append('address', newRegister.address);
+		// data.append('city', newRegister.city);
+		// data.append('state', newRegister.state);
+		// data.append('zip', newRegister.zip);
+		// data.append('description_of_listing', newRegister.description_of_listing);
+		// data.append('contact_host_email', newRegister.contact_host_email);
+		// data.append('booking_url', newRegister.booking_url);
+		// data.append('image', this.file);
+		// data.append('accommodates', newRegister.accommodates);
+		// data.append('bedrooms', newRegister.bedrooms);
+		// data.append('beds', newRegister.beds);
+		// data.append('bathrooms', newRegister.bathrooms);
+		// data.append('check_in', newRegister.check_in);
+		// data.append('check_out', newRegister.check_out);
+		// data.append('property_type', newRegister.property_type);
+		// data.append('house_rules', newRegister.house_rules);
+		// // --------- ammeneties start ---------
+		// data.append('kitchen', newRegister.kitchen);
+		// data.append('internet', newRegister.internet);
+		// data.append('tv', newRegister.tv);
+		// data.append('essentials', newRegister.essentials);
+		// data.append('shower_essentials', newRegister.shower_essentials);
+		// data.append('heating', newRegister.heating);
+		// data.append('airconditioning', newRegister.airconditioning);
+		// data.append('washer', newRegister.washer);
+		// data.append('dryer', newRegister.dryer);
+		// data.append('dishwasher', newRegister.dishwasher);
+		// data.append('free_parking', newRegister.free_parking);
+		// data.append('cable', newRegister.cable);
+		// data.append('satellite', newRegister.satellite);
+		// data.append('pets', newRegister.pets);
+		// data.append('kid_friendly', newRegister.kid_friendly);
+		// data.append('events', newRegister.events);
+		// data.append('smoking', newRegister.smoking);
+		// data.append('wheelchair_accessible', newRegister.wheelchair_accessible);
+		// data.append('elevator', newRegister.elevator);
+		// data.append('fireplace', newRegister.fireplace);
+		// data.append('intercom', newRegister.intercom);
+		// data.append('doorman', newRegister.doorman);
+		// data.append('pool', newRegister.pool);
+		// data.append('hottub', newRegister.hottub);
+		// data.append('gym', newRegister.gym);
+		// data.append('hangers', newRegister.hangers);
+		// data.append('iron', newRegister.iron);
+		// data.append('hair_dryer', newRegister.hair_dryer);
+		// data.append('workstation', newRegister.workstation);
+		// data.append('billiards', newRegister.billiards);
+		// // --------- ammeneties end ---------
+		// data.append('the_space', newRegister.the_space);
+		// data.append('guest_access', newRegister.guest_access);
+		// data.append('interaction_with_guests', newRegister.interaction_with_guests);
+		// data.append('interaction_with_guests', newRegister.interaction_with_guests);
+		// data.append('the_area', newRegister.the_area);
+		// data.append('other_things_to_note', newRegister.other_things_to_note);
+		// data.append('base_price', newRegister.base_price);
+
+
+
+
