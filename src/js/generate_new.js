@@ -22,10 +22,6 @@ export default class GenerateNew extends Component {
 	// 		})
 	// 	}
 
-//When we post a request to the bakcend to create the new cabin listing, the BE responds with 
-//a response that includes the id # of that property.
-//Each response has an id # 
-//make the property id 
 	componentWillMount(){
 		let { cabininfo } = this.props.params;
 		console.log(this.props.params)
