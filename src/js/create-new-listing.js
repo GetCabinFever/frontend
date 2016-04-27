@@ -27,7 +27,6 @@ export default class CreateNewListing extends Component {
 
 	dataHandler(newRegister) {
 		let data = new FormData();
-		
 
 		Object.keys(newRegister).forEach(key => {
 			let val = newRegister[key];
@@ -314,7 +313,7 @@ export default class CreateNewListing extends Component {
 
 							<div className="ameneties_wrapper">
 
-								<h3> Ameneties </h3>
+								<h3> Amenities </h3>
 
 								<div>
 										<label>

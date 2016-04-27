@@ -9,9 +9,10 @@ import CreateNewListing from './create-new-listing';
 import Dashboard from './dashboard';
 import SimpleSerialForm from 'react-simple-serial-form';
 
-
 export default class RegisterModal extends Component {
 	
+	// var currentUser = null;
+
 	dataHandler(data){
 		console.log('data', data);
 		ajax({
@@ -24,18 +25,20 @@ export default class RegisterModal extends Component {
 			// contentType: false
 		}).then( (response) => {
 			console.log('register response--->', response);
-			if (response.email) { 
-				Cookies.set('currentUser', response.user.auth_token, { expires: 1 });
+			// if (response.email) { 
+				Cookies.set('currentUser', response.auth_token, { expires: 1 });
 				ajaxSetup({
-					headers: { 'X-Auth-Token': response.user.auth_token }
+					headers: { 'X-Auth-Token': response.auth_token }
 				})
-				console.log('currentUser cookies--->', currentUser);
+				// console.log('currentUser cookies--->', currentUser);
 				hashHistory.push('/dashboard');
-			} else {
+			// } else {
+			// 	hashHistory.push('/');
+			}).fail(error => {
+				alert("Register failed. Check that all information is entered correctly.")
 				hashHistory.push('/');
-			}
-		})
-	}
+			});
+		};
 
 	onBack(){
 		hashHistory.push('/')
