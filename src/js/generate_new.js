@@ -9,8 +9,25 @@ export default class GenerateNew extends Component {
 
 		return (
 			<div>
-			<h1> HEY!!! </h1>
-			<h2> IT WORKS!!! MAYBE? </h2>
+				<div className="top">
+					<div className="hero-image"></div>
+					<div className="title"></div>	
+					<div className="property-description"></div>
+					<div className="property-link"></div>	
+				</div>
+				
+				<div className="middle">
+					<div className="basic-property-info"></div>
+					<div className="prices"></div>
+				</div>
+
+				<div className="bottom">
+					<div className="host-image"></div>
+					<div className="host-name"></div>
+					<div className="host-email"></div>
+					<div className="additional-prop-info"></div>
+					<div className="guestbook"></div>
+				</div>
 			</div>
 		);
 	}
