@@ -19,20 +19,13 @@ export default class LoginModal extends Component {
 			cache: false,
 			dataType: 'json',
 		}).then((response)=>{
-			// successs
 			console.log('login response--->', response);
-			// if (response.user.email) {
 				Cookies.set('currentUser', response.user.auth_token, {expires: 1});
 				ajaxSetup({
 					headers: { 'X-Auth-Token': response.user.auth_token }
 				})
 				console.log('auth-token--->', response.user.auth_token);
 				hashHistory.push('/dashboard');
-			// } else {
-			// 	console.log('unsuccessful login--->', response);
-			// 	// alert("Log-in failed. Please try again.");
-			// 	// hashHistory.push('/');
-			// }
 		}).fail(error => {
 			console.log('failed to log in');
 		});
