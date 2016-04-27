@@ -13,7 +13,7 @@ export default class GenerateNew extends Component {
 
 		return (
 			<div>
-				<div className="barbies">
+				<div className="top">
 					<div className="hero-image"></div>
 					<div className="title"></div>	
 					<div className="property-description"></div>
