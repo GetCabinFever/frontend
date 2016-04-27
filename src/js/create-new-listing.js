@@ -27,7 +27,6 @@ export default class CreateNewListing extends Component {
 
 	dataHandler(newRegister) {
 		let data = new FormData();
-		
 
 		Object.keys(newRegister).forEach(key => {
 			let val = newRegister[key];
@@ -297,7 +296,7 @@ export default class CreateNewListing extends Component {
 								<select className="select-btn" name="property_type">
 
 									<option value={'Cabin'}>Cabin</option>
-									<option value={'Cottage'}>Cotage</option>
+									<option value={'Cottage'}>Cottage</option>
 									<option value={'House'}>House</option>
 									<option value={'Apartment'}>Apartment</option>
 
@@ -314,7 +313,7 @@ export default class CreateNewListing extends Component {
 
 							<div className="ameneties_wrapper">
 
-								<h3> Ameneties </h3>
+								<h3> Amenities </h3>
 
 								<div>
 										<label>Kitchen
