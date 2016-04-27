@@ -1,5 +1,5 @@
 // Javascript Entry Point
-import React, { Component }  from 'react';
+import React, { Component, Render }  from 'react';
 import ReactDOM from 'react-dom';
 import { Router, Route, hashHistory, IndexRoute, Link } from 'react-router';
 import SimpleSerialForm from 'react-simple-serial-form';
@@ -13,7 +13,6 @@ export default class CreateNewListing extends Component {
 		super();
 		this.state={
 			preview: 'http://www.martinezcreativegroup.com/wp-content/uploads/2014/05/img-placeholder.png',
-			value: 2
 		}
 	}
 
@@ -33,6 +32,8 @@ export default class CreateNewListing extends Component {
 		Object.keys(newRegister).forEach(key => {
 			let val = newRegister[key];
 			data.append(key, val);
+			data.append('image', this.file);
+
 		})
 
 		// data.append('title_of_page', newRegister.title_of_page);
@@ -93,7 +94,7 @@ export default class CreateNewListing extends Component {
 		// data.append('base_price', newRegister.base_price);
 
 		ajax({
-			url: 'blah blah blah',
+			url: 'https://cabinfever.herokuapp.com/residences',
 			type: 'POST',
 			data: data, 
 			cache: false,
@@ -171,8 +172,8 @@ export default class CreateNewListing extends Component {
 
 							<div className="description_of_listing">
 								<span>Description Of Listing</span>
-								<textarea name="description_of_listing"> 
-									Paint a picture with words about your location. 
+								<textarea name="description_of_listing" defaultValue="Paint a picture with your words."> 
+									
 								</textarea>
 							</div>
 
@@ -306,7 +307,7 @@ export default class CreateNewListing extends Component {
 
 								<div className="house_rules">
 									<span>House Rules</span>
-									<textarea name="house_rules"> 
+									<textarea name="house_rules" defaultValue="How do they take care of the space?"> 
 										
 									</textarea>
 								</div>
@@ -315,40 +316,132 @@ export default class CreateNewListing extends Component {
 
 								<h3> Ameneties </h3>
 
-								<form action="">
-									<input type="checkbox" name="kitchen" value="true"><Icon type="cutlery"/>Kitchen</input>
-									<input type="checkbox" name="internet" value="true"><Icon type="wifi"/>Internet</input>
-									<input type="checkbox" name="tv" value="true"><Icon type="television"/>Television</input>
-									<input type="checkbox" name="essentials" value="true"><Icon type="star"/>Essentials</input>
-									<input type="checkbox" name="shower_essentials" value="true"><Icon type="tint"/>Shower Essentials</input>
-									<input type="checkbox" name="heating" value="true"><Icon type="fire"/>Heating</input>
-									<input type="checkbox" name="airconditioning" value="true"><Icon type="refresh"/>Air Conditioning</input>
-									<input type="checkbox" name="washer" value="true"><Icon type="square"/>Washer</input>
-									<input type="checkbox" name="dryer" value="true"><Icon type="square-o"/>Dryer</input>
-									<input type="checkbox" name="dishwasher" value="true"><Icon type="database"/>Dishwasher</input>
-									<input type="checkbox" name="free_parking" value="true"><Icon type="hand-o-right"/>Free Parking</input>
-									<input type="checkbox" name="cable" value="true"><Icon type="hdd-o"/>Cable</input>
-									<input type="checkbox" name="satellite" value="true"><Icon type="hdd-o"/>Satellite</input>
-									<input type="checkbox" name="breakfast" value="true"><Icon type="spoon"/>Breakfast</input>
-									<input type="checkbox" name="pets" value="true"><Icon type="paw"/>Pets</input>
-									<input type="checkbox" name="kid_friendly" value="true"><Icon type="child"/>Kid Friendly</input>
-									<input type="checkbox" name="events" value="true"><Icon type="sun-o"/>Events</input>
-									<input type="checkbox" name="smoking" value="true"><Icon type="ban"/>Smoking</input>
-									<input type="checkbox" name="wheelchair_accessible" value="true"><Icon type="wheelchair"/>Wheelchair Accessible</input>
-									<input type="checkbox" name="elevator" value="true"><Icon type="building-o"/>Elevator</input>
-									<input type="checkbox" name="fireplace" value="true"><Icon type="home"/>Fireplace</input>
-									<input type="checkbox" name="intercom" value="true"><Icon type="circle-o"/>Intercom</input>
-									<input type="checkbox" name="doorman" value="true"><Icon type="bell"/>Doorman</input>
-									<input type="checkbox" name="pool" value="true"><Icon type="life-ring"/>Pool</input>
-									<input type="checkbox" name="hottub" value="true"><Icon type="heart-o"/>Hot Tub</input>
-									<input type="checkbox" name="gym" value="true"><Icon type="futbol-o"/>Gym</input>
-									<input type="checkbox" name="hangers" value="true"><Icon type="filter"/>Hangers</input>
-									<input type="checkbox" name="iron" value="true"><Icon type="eject"/>Iron</input>
-									<input type="checkbox" name="hair_dryer" value="true"><Icon type="cloud"/>Hair Dryer</input>
-									<input type="checkbox" name="workstation" value="true"><Icon type="briefcase"/>Workstation</input>
-									<input type="checkbox" name="billiards" value="true"><Icon type="circle"/>Billiards</input>
-									<input type="checkbox" name="billiards" value="true"><Icon type="circle"/>Billiards</input>
-									</form>
+								<div>
+										<label>Kitchen
+											<input type="checkbox" name="kitchen" value="true"/><Icon type="cutlery"/> 
+										</label>
+
+										<label>Internet
+											<input type="checkbox" name="internet" value="true"/><Icon type="wifi"/> 
+										</label>
+
+										<label>Television
+										<input type="checkbox" name="tv" value="true"/><Icon type="television"/> 
+										</label>
+
+										<label>Essentials
+										<input type="checkbox" name="essentials" value="true"/><Icon type="star"/> 
+										</label>
+
+										<label>Shower Essentials
+										<input type="checkbox" name="shower_essentials" value="true"/><Icon type="tint"/> 
+										</label>
+
+										<label>Heating
+										<input type="checkbox" name="heating" value="true"/><Icon type="fire"/> 
+										</label>
+
+										<label>Air Conditioning
+										<input type="checkbox" name="airconditioning" value="true"/><Icon type="refresh"/> 
+										</label>
+
+										<label>Washer
+										<input type="checkbox" name="washer" value="true"/><Icon type="square"/> 
+										</label>
+
+										<label>Dryer
+										<input type="checkbox" name="dryer" value="true"/><Icon type="square-o"/> 
+										</label>
+
+										<label>Dishwasher
+										<input type="checkbox" name="dishwasher" value="true"/><Icon type="database"/> 
+										</label>
+
+										<label>Free Parking
+										<input type="checkbox" name="free_parking" value="true"/><Icon type="hand-o-right"/> 
+										</label>
+
+										<label>Cable
+										<input type="checkbox" name="cable" value="true"/><Icon type="hdd-o"/> 
+										</label>
+
+										<label>Satellite
+										<input type="checkbox" name="satellite" value="true"/><Icon type="hdd-o"/> 
+										</label>
+
+										<label>Breakfast
+										<input type="checkbox" name="breakfast" value="true"/><Icon type="spoon"/> 
+										</label>
+
+										<label>Pets
+										<input type="checkbox" name="pets" value="true"/><Icon type="paw"/> 
+										</label>
+
+										<label>Kid Friendly
+										<input type="checkbox" name="kid_friendly" value="true"/><Icon type="child"/> 
+										</label>
+
+										<label>Events
+										<input type="checkbox" name="events" value="true"/><Icon type="sun-o"/> 
+										</label>
+
+										<label>Smoking
+										<input type="checkbox" name="smoking" value="true"/><Icon type="ban"/> 
+										</label>
+
+										<label>Wheelchair Accessible
+										<input type="checkbox" name="wheelchair_accessible" value="true"/><Icon type="wheelchair"/> 
+										</label>
+
+										<label>Elevator
+										<input type="checkbox" name="elevator" value="true"/><Icon type="building-o"/> 
+										</label>
+
+										<label>Fireplace
+										<input type="checkbox" name="fireplace" value="true"/><Icon type="home"/> 
+										</label>
+
+										<label>Intercom
+										<input type="checkbox" name="intercom" value="true"/><Icon type="circle-o"/> 
+										</label>
+
+										<label>Doorman
+										<input type="checkbox" name="doorman" value="true"/><Icon type="bell"/> 
+										</label>
+
+										<label>Pool
+										<input type="checkbox" name="pool" value="true"/><Icon type="life-ring"/> 
+										</label>
+
+										<label>Hot Tub
+										<input type="checkbox" name="hottub" value="true"/><Icon type="heart-o"/> 
+										</label>
+
+										<label>Gym
+										<input type="checkbox" name="gym" value="true"/><Icon type="futbol-o"/> 
+										</label>
+
+										<label>Hangers
+										<input type="checkbox" name="hangers" value="true"/><Icon type="filter"/> 
+										</label>
+
+										<label>Iron
+										<input type="checkbox" name="iron" value="true"/><Icon type="eject"/> 
+										</label>
+
+										<label>Hair Dryer
+										<input type="checkbox" name="hair_dryer" value="true"/><Icon type="cloud"/> 
+										</label>
+
+										<label>Workstation
+										<input type="checkbox" name="workstation" value="true"/><Icon type="briefcase"/> 
+										</label>
+
+										<label>Billiards
+										<input type="checkbox" name="billiards" value="true"/><Icon type="circle"/> 
+										</label>
+						
+								</div>
 
 							</div>
 
@@ -358,35 +451,35 @@ export default class CreateNewListing extends Component {
 
 								<div className="description_of_space">
 									<span>Description Of The Space</span>
-									<textarea name="the_space"> 
+									<textarea name="the_space" defaultValue="What is it like to be there?"> 
 										
 									</textarea>
 								</div>
 
 								<div className="guest_access">
 									<span>Guest Access Instructions</span>
-									<textarea name="guest_access"> 
+									<textarea name="guest_access" defaultValue="How do your guests get in the space?"> 
 										
 									</textarea>
 								</div>
 
 								<div className="interaction_with_guests">
 									<span>Interaction With Guests</span>
-									<textarea name="interaction_with_guests"> 
+									<textarea name="interaction_with_guests" defaultValue="Will you interact with your guests?"> 
 										
 									</textarea>
 								</div>
 
 								<div className="the_area">
 									<span>What's going on in the area?</span>
-									<textarea name="the_area"> 
+									<textarea name="the_area" defaultValue="Any recommendations?"> 
 										
 									</textarea>
 								</div>
 
 								<div className="other_things_to_note">
 									<span>Other Things To Note</span>
-									<textarea name="other_things_to_note"> 
+									<textarea name="other_things_to_note" defaultValue="Safety Notes, Special Instructions, A nice message"> 
 										
 									</textarea>
 								</div>
@@ -401,7 +494,7 @@ export default class CreateNewListing extends Component {
 
 							</div>
 
-							<button>Submit</button>
+							<button type="submit">Submit</button>
 
 						</SimpleSerialForm>
 					</div>
