@@ -4,9 +4,9 @@ import { Router, Route, hashHistory, IndexRoute, Link } from 'react-router';
 import { ajax } from 'jquery';
 
 export default class GenerateNew extends Component {
-	constructor(...args){
-		super(...args);
-		this.state={ CabinInfo:[] };
+	constructor(...props){
+		super(...props);
+		this.state={ cabininfo:{} };
 	}
 
 	// componentWillMount(data){
@@ -23,17 +23,19 @@ export default class GenerateNew extends Component {
 	// 	}
 
 	componentWillMount(){
-		ajax('https://cabinfever.heroku.com/residences').then(response=>{ 
-			console.log(response);
-			// this.setState({CabinInfo});
+		let { cabininfo } = this.props.params;
+		console.log(this.props.params)
+		ajax(`https://cabinfever.herokuapp.com/residences/${cabininfo}`).then(data => { 
+			console.log(data);
+			this.setState({cabininfo: data});
 		})
 	}
 
 	// {CabinInfo[0].id} 
 
 	render() {
-		let { CabinInfo } = this.state;
-		// console.log({CabinInfo});
+		let { cabininfo } = this.state;
+		console.log(cabininfo);
 		return (
 			<div>
 				<div className="top">
@@ -47,6 +49,7 @@ export default class GenerateNew extends Component {
 					<div className="basic-property-info">
 
 						<h1>All Cabins Info</h1>
+						<img src={cabininfo.image_url}/>
 
 					</div>
 					<div className="prices"></div>

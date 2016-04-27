@@ -18,7 +18,7 @@ ReactDOM.render((
 			<Route path="/login" component={LoginModal} />
 			<Route path="/create-new-listing" component={CreateNewListing} />
 			<Route path="/dashboard" component={Dashboard} />
-			<Route path="/generate_new" component={GenerateNew} />
+			<Route path="/generate_new/:cabininfo" component={GenerateNew} />
 		</Route>
 	</Router>
 	), document.querySelector('.app'));

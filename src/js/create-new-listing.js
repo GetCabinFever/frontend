@@ -44,8 +44,8 @@ export default class CreateNewListing extends Component {
 			processData: false,
 			contentType: false
 		}).then ( response => { 
-			console.log(response)
-		}).then(hashHistory.push('/generate_new'));
+			hashHistory.push(`/generate_new/${response.residence.id}`)
+		});
 	}
 
 
