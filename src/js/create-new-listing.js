@@ -164,7 +164,7 @@ export default class CreateNewListing extends Component {
 
 							<div className="zip_input">
 								<label>
-									State
+									Zip Code
 									<input type="text" name="zip" />
 								</label>
 							</div>
