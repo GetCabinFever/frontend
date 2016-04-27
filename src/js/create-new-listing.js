@@ -1,5 +1,5 @@
 // Javascript Entry Point
-import React, { Component, Render }  from 'react';
+import React, { Component }  from 'react';
 import ReactDOM from 'react-dom';
 import { Router, Route, hashHistory, IndexRoute, Link } from 'react-router';
 import SimpleSerialForm from 'react-simple-serial-form';
@@ -316,128 +316,128 @@ export default class CreateNewListing extends Component {
 								<h3> Amenities </h3>
 
 								<div>
-										<label>Kitchen
-											<input type="checkbox" name="kitchen" value="true"/><Icon type="cutlery"/> 
+										<label>
+											<input type="checkbox" name="kitchen" value="true"/><Icon type="cutlery"/>Kitchen
 										</label>
 
-										<label>Internet
-											<input type="checkbox" name="internet" value="true"/><Icon type="wifi"/> 
+										<label>
+											<input type="checkbox" name="internet" value="true"/><Icon type="wifi"/>Internet 
 										</label>
 
-										<label>Television
-										<input type="checkbox" name="tv" value="true"/><Icon type="television"/> 
+										<label>
+										<input type="checkbox" name="tv" value="true"/><Icon type="television"/>Television 
 										</label>
 
-										<label>Essentials
-										<input type="checkbox" name="essentials" value="true"/><Icon type="star"/> 
+										<label>
+										<input type="checkbox" name="essentials" value="true"/><Icon type="star"/>Essentials
 										</label>
 
-										<label>Shower Essentials
-										<input type="checkbox" name="shower_essentials" value="true"/><Icon type="tint"/> 
+										<label>
+										<input type="checkbox" name="shower_essentials" value="true"/><Icon type="tint"/>Shower Essentials 
 										</label>
 
-										<label>Heating
-										<input type="checkbox" name="heating" value="true"/><Icon type="fire"/> 
+										<label>
+										<input type="checkbox" name="heating" value="true"/><Icon type="fire"/>Heating 
 										</label>
 
-										<label>Air Conditioning
-										<input type="checkbox" name="airconditioning" value="true"/><Icon type="refresh"/> 
+										<label>
+										<input type="checkbox" name="airconditioning" value="true"/><Icon type="refresh"/>Air Conditioning 
 										</label>
 
-										<label>Washer
-										<input type="checkbox" name="washer" value="true"/><Icon type="square"/> 
+										<label>
+										<input type="checkbox" name="washer" value="true"/><Icon type="square"/>Washer 
 										</label>
 
-										<label>Dryer
-										<input type="checkbox" name="dryer" value="true"/><Icon type="square-o"/> 
+										<label>
+										<input type="checkbox" name="dryer" value="true"/><Icon type="square-o"/>Dryer 
 										</label>
 
-										<label>Dishwasher
-										<input type="checkbox" name="dishwasher" value="true"/><Icon type="database"/> 
+										<label>
+										<input type="checkbox" name="dishwasher" value="true"/><Icon type="database"/>Dishwasher 
 										</label>
 
-										<label>Free Parking
-										<input type="checkbox" name="free_parking" value="true"/><Icon type="hand-o-right"/> 
+										<label>
+										<input type="checkbox" name="free_parking" value="true"/><Icon type="hand-o-right"/>Free Parking 
 										</label>
 
-										<label>Cable
-										<input type="checkbox" name="cable" value="true"/><Icon type="hdd-o"/> 
+										<label>
+										<input type="checkbox" name="cable" value="true"/><Icon type="hdd-o"/>Cable 
 										</label>
 
-										<label>Satellite
-										<input type="checkbox" name="satellite" value="true"/><Icon type="hdd-o"/> 
+										<label>
+										<input type="checkbox" name="satellite" value="true"/><Icon type="hdd-o"/>Satellite
 										</label>
 
-										<label>Breakfast
-										<input type="checkbox" name="breakfast" value="true"/><Icon type="spoon"/> 
+										<label>
+										<input type="checkbox" name="breakfast" value="true"/><Icon type="spoon"/>Breakfast 
 										</label>
 
-										<label>Pets
-										<input type="checkbox" name="pets" value="true"/><Icon type="paw"/> 
+										<label>
+										<input type="checkbox" name="pets" value="true"/><Icon type="paw"/>Pets
 										</label>
 
-										<label>Kid Friendly
-										<input type="checkbox" name="kid_friendly" value="true"/><Icon type="child"/> 
+										<label>
+										<input type="checkbox" name="kid_friendly" value="true"/><Icon type="child"/>Kid Friendly 
 										</label>
 
-										<label>Events
-										<input type="checkbox" name="events" value="true"/><Icon type="sun-o"/> 
+										<label>
+										<input type="checkbox" name="events" value="true"/><Icon type="sun-o"/>Events 
 										</label>
 
-										<label>Smoking
-										<input type="checkbox" name="smoking" value="true"/><Icon type="ban"/> 
+										<label>
+										<input type="checkbox" name="smoking" value="true"/><Icon type="ban"/>Smoking
 										</label>
 
-										<label>Wheelchair Accessible
-										<input type="checkbox" name="wheelchair_accessible" value="true"/><Icon type="wheelchair"/> 
+										<label>
+										<input type="checkbox" name="wheelchair_accessible" value="true"/><Icon type="wheelchair"/>Wheelchair Accessible 
 										</label>
 
-										<label>Elevator
-										<input type="checkbox" name="elevator" value="true"/><Icon type="building-o"/> 
+										<label>
+										<input type="checkbox" name="elevator" value="true"/><Icon type="building-o"/>Elevator 
 										</label>
 
-										<label>Fireplace
-										<input type="checkbox" name="fireplace" value="true"/><Icon type="home"/> 
+										<label>
+										<input type="checkbox" name="fireplace" value="true"/><Icon type="home"/>Fireplace 
 										</label>
 
-										<label>Intercom
-										<input type="checkbox" name="intercom" value="true"/><Icon type="circle-o"/> 
+										<label>
+										<input type="checkbox" name="intercom" value="true"/><Icon type="circle-o"/>Intercom 
 										</label>
 
-										<label>Doorman
-										<input type="checkbox" name="doorman" value="true"/><Icon type="bell"/> 
+										<label>
+										<input type="checkbox" name="doorman" value="true"/><Icon type="bell"/>Doorman 
 										</label>
 
-										<label>Pool
-										<input type="checkbox" name="pool" value="true"/><Icon type="life-ring"/> 
+										<label>
+										<input type="checkbox" name="pool" value="true"/><Icon type="life-ring"/>Pool 
 										</label>
 
-										<label>Hot Tub
-										<input type="checkbox" name="hottub" value="true"/><Icon type="heart-o"/> 
+										<label>
+										<input type="checkbox" name="hottub" value="true"/><Icon type="heart-o"/>Hot Tub 
 										</label>
 
-										<label>Gym
-										<input type="checkbox" name="gym" value="true"/><Icon type="futbol-o"/> 
+										<label>
+										<input type="checkbox" name="gym" value="true"/><Icon type="futbol-o"/>Gym 
 										</label>
 
-										<label>Hangers
-										<input type="checkbox" name="hangers" value="true"/><Icon type="filter"/> 
+										<label>
+										<input type="checkbox" name="hangers" value="true"/><Icon type="filter"/>Hangers 
 										</label>
 
-										<label>Iron
-										<input type="checkbox" name="iron" value="true"/><Icon type="eject"/> 
+										<label>
+										<input type="checkbox" name="iron" value="true"/><Icon type="eject"/> Iron
 										</label>
 
-										<label>Hair Dryer
-										<input type="checkbox" name="hair_dryer" value="true"/><Icon type="cloud"/> 
+										<label>
+										<input type="checkbox" name="hair_dryer" value="true"/><Icon type="cloud"/>Hair Dryer 
 										</label>
 
-										<label>Workstation
-										<input type="checkbox" name="workstation" value="true"/><Icon type="briefcase"/> 
+										<label>
+										<input type="checkbox" name="workstation" value="true"/><Icon type="briefcase"/>Workstation 
 										</label>
 
-										<label>Billiards
-										<input type="checkbox" name="billiards" value="true"/><Icon type="circle"/> 
+										<label>
+										<input type="checkbox" name="billiards" value="true"/><Icon type="circle"/>Billiards 
 										</label>
 						
 								</div>
