@@ -29,7 +29,7 @@ export default class GenerateNew extends Component {
 		})
 	}
 
-						// {CabinInfo[0].id} 
+	// {CabinInfo[0].id} 
 
 	render() {
 		let { CabinInfo } = this.state;
@@ -47,8 +47,6 @@ export default class GenerateNew extends Component {
 					<div className="basic-property-info">
 
 						<h1>All Cabins Info</h1>
-
-
 
 					</div>
 					<div className="prices"></div>
