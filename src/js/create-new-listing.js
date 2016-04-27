@@ -102,7 +102,7 @@ export default class CreateNewListing extends Component {
 			processData: false,
 			contentType: false
 		}).then ( response => { console.log(response)
-		});
+		}).then(hashHistory.push('/generate_new'));
 	}
 
 
@@ -297,7 +297,7 @@ export default class CreateNewListing extends Component {
 								<select className="select-btn" name="property_type">
 
 									<option value={'Cabin'}>Cabin</option>
-									<option value={'Cottage'}>Cotage</option>
+									<option value={'Cottage'}>Cottage</option>
 									<option value={'House'}>House</option>
 									<option value={'Apartment'}>Apartment</option>
 

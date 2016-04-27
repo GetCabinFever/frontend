@@ -6,7 +6,10 @@ import { ajax } from 'jquery';
 export default class GenerateNew extends Component {
 	render() {
 		return (
-			<h1> HI IT WORKS </h1>
+			<div>
+			<h1> HI USER, GUESS WHA? </h1>
+			<h2> IT WORKS!!! MAYBE? </h2>
+			</div>
 		);
 	}
 }
