@@ -23,44 +23,71 @@ export default class GenerateNew extends Component {
 
 	renderPage(){
 		let { cabininfo } = this.state;
-
-		console.log('fuck all the things');
 		console.log('cabininfo.residence ===>', cabininfo.residence);
 		// console.log('cabininfo.residence.bathrooms ===>', cabininfo.residence.bathrooms);
 
 		return (
+			
 			<div>
 				<div className="top">
+
 					<div className="hero-image">
 						<img src={cabininfo.image_url}/>
 					</div>
+
 					<div className="title">
-						<h1></h1>
-					</div>	
-					<div className="property-description">
-						<div>{cabininfo.residence.address}</div>
+						<h1>{cabininfo.residence.title_of_page}</h1>
 					</div>
+
+					<div className="property-description">
+						<p>{cabininfo.residence.description_of_listing}</p>
+					</div>
+
 					<div className="property-link">
+
 					</div>	
+
 
 				</div>
 				
 				<div className="middle">
+
 					<div className="basic-property-info">
+
 						<h1>All Cabins Info</h1>
 						<img src={cabininfo.image_url} />
-					</div>
+					
 
 					<div className="prices"></div>
+				
+
+				
+
+				</div>
+
 				</div>
 
 				<div className="bottom">
-					<div className="host-image"></div>
-					<div className="host-name"></div>
-					<div className="host-email"></div>
-					<div className="additional-prop-info"></div>
-					<div className="guestbook"></div>
+
+					<div className="host-image">
+					</div>
+
+					<div className="host-name">
+					</div>
+
+					<div className="host-email">
+						<h5>{cabininfo.residence.contact_host_email}</h5>
+					</div>
+
+					<div className="additional-prop-info">
+					</div>
+
+					<div className="guestbook">
+					</div>
+
+
 				</div>
+
 			</div>
 		);
 	}
