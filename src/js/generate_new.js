@@ -42,16 +42,15 @@ export default class GenerateNew extends Component {
 					</div>
 					<div className="property-link">
 					</div>	
+
 				</div>
 				
 				<div className="middle">
 					<div className="basic-property-info">
-
-
 						<h1>All Cabins Info</h1>
 						<img src={cabininfo.image_url} />
-
 					</div>
+
 					<div className="prices"></div>
 				</div>
 
@@ -77,3 +76,4 @@ renderLoading(){
 		return loading ? this.renderLoading() : this.renderPage()
 	}
 }
+
