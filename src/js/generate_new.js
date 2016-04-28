@@ -25,7 +25,9 @@ export default class GenerateNew extends Component {
 		let { cabininfo } = this.state;
 		console.log('cabininfo.residence ===>', cabininfo.residence);
 		// console.log('cabininfo.residence.bathrooms ===>', cabininfo.residence.bathrooms);
+
 		return (
+			
 			<div>
 				<div className="top">
 
@@ -50,9 +52,6 @@ export default class GenerateNew extends Component {
 				<div className="middle">
 
 					<div className="basic-property-info">
-					</div>
-
-					<div className="prices">
 					</div>
 
 				</div>
