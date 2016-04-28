@@ -26,16 +26,20 @@ export default class GenerateNew extends Component {
 		let { cabininfo } = this.props.params;
 		console.log(this.props.params)
 		ajax(`https://cabinfever.herokuapp.com/residences/${cabininfo}`).then(data => { 
-			console.log(data);
+			// console.log(data);
 			this.setState({cabininfo: data});
+		}).then({
+
+			console.log('cabininfo amenities fireplace?--->', cabininfo.amenities.fireplace);
 		})
 	}
 
-	// {CabinInfo[0].id} 
-
 	render() {
 		let { cabininfo } = this.state;
-		console.log(cabininfo);
+		let residenceObj = this.state.cabininfo.residence;
+		// console.log('cabin info response --->', cabininfo);
+		// console.log('cabiddn info residence object -->', residenceObj);
+		// console.log('cabin safeties object--->', cabininfo.safeties);
 		return (
 			<div>
 				<div className="top">
@@ -49,8 +53,7 @@ export default class GenerateNew extends Component {
 					<div className="basic-property-info">
 
 						<h1>All Cabins Info</h1>
-						<img src={cabininfo.image_url}/>
-
+						<img src={cabininfo.image_url} />
 					</div>
 					<div className="prices"></div>
 				</div>

@@ -19,7 +19,7 @@ export default class LoginModal extends Component {
 			cache: false,
 			dataType: 'json',
 		}).then((response)=>{
-			console.log('login response--->', response);
+				console.log('login response--->', response);
 				Cookies.set('currentUser', response.user.auth_token, {expires: 1});
 				ajaxSetup({
 					headers: { 'X-Auth-Token': response.user.auth_token }
