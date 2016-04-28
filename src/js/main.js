@@ -9,6 +9,7 @@ export default class Main extends Component {
 	render(){
 		return(
 			<div className="main">
+			
 				<nav>
 	
 					<Link to="/login"> Log In </Link>
@@ -17,7 +18,7 @@ export default class Main extends Component {
 
 				</nav>
 
-				<img src="http://cdn2.hubspot.net/hub/95659/file-28152120-jpg/images/cabins-in-ga1.jpg" />
+				<div className="main-hero-img"></div>
 				
 			</div>
 		)

@@ -7,16 +7,46 @@
 // --------------------- HEADING --------------------
 
 .heading {
+  
+}
+
+.home-logo{
+  content: url(http://i.imgur.com/52d2JK9.jpg);
+  height: 61px;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+.search-bar {
   background-color: #f4c45e;
+  border: transparent;
+  position: absolute;
+  top: 8px;
+  width: 93%;
+  color: black;
+  font-size: 21px;
+  left: 91px;
+  height: 8.1%;
+  text-align: center;
 }
 
 // --------------------- END OF HEADING --------------------
+
+// --------------------- START OF MAIN --------------------
 
 .main nav {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
 }
+
+.main-hero-img {
+  content: url(http://i.imgur.com/vrbOnrk.jpg);
+  width: 109.5%;
+}
+
+// --------------------- END OF MAIN --------------------
 
 .heading {
 	text-align: center;	
@@ -61,6 +91,10 @@
 
 .bottom {
   background-color: #8e8e8e;
+}
+
+.false {
+  opacity: .5;
 }
 
 
