@@ -59,7 +59,6 @@ export default class GenerateNew extends Component {
 					<h4> Base Price: {cabininfo.residence.base_price} </h4>
 
 					<div className="basic-property-info">
-<<<<<<< HEAD
 						<ul>
 							<li> Property Type: {cabininfo.residence.property_type} </li>
 							<li> Accomodates: {cabininfo.residence.accommodates} </li>
@@ -105,19 +104,6 @@ export default class GenerateNew extends Component {
 								<li value={cabininfo.amenities.billiards}><Icon type="circle"/>Billiards</li>
 							</ul>
 					</div>
-=======
-
-						<h1>All Cabins Info</h1>
-						<img src={cabininfo.image_url} />
-					
-
-					<div className="prices"></div>
-				
-
-				
-
-				</div>
->>>>>>> c34499214fe7dbd7e53c558c07b5aa5648b0c877
 
 				</div>
 
