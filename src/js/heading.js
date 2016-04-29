@@ -1,7 +1,7 @@
 // Javascript Entry Point
 import React, { Component }  from 'react';
 import ReactDOM from 'react-dom';
-import { Router, Route, hashHistory, IndexRoute } from 'react-router';
+import { Router, Route, hashHistory, IndexRoute, Link } from 'react-router';
 
 export default class Heading extends Component {
 
@@ -9,14 +9,11 @@ export default class Heading extends Component {
 		return(
 			<div className="heading">
 
-				<h1>*****CabinFever*****</h1>
+			<Link to="/"><div className="home-logo"></div></Link>
 				
-				<h1>*****MAIN PAGE*****</h1>
+				<input className="search-bar" type="text" placeholder="Search | Cabin Fever"/>
 				
 				{this.props.children}
-				
-				<footer>*****Footer*****</footer>
-				
 			</div>
 		)
 	}

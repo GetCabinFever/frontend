@@ -28,6 +28,8 @@ export default class GenerateNew extends Component {
 		console.log('cabininfo.residence ===>', cabininfo.residence);
 		// console.log('cabininfo.residence.bathrooms ===>', cabininfo.residence.bathrooms);
 
+		console.log('kitchen', cabininfo.amenities.kitchen);
+
 		return (
 
 			<div>
@@ -71,37 +73,37 @@ export default class GenerateNew extends Component {
 					<div className="amenities">
 						<h3> Amenities </h3>
 							<ul>
-								<li value={cabininfo.amenities.kitchen}><Icon type="cutlery"/>Kitchen</li>
-								<li value={cabininfo.amenities.internet}><Icon type="wifi"/>Internet</li>
-								<li value={cabininfo.amenities.tv}><Icon type="television"/>Television</li>
-								<li value={cabininfo.amenities.essentials}><Icon type="star"/>Essentials</li>
-								<li value={cabininfo.amenities.shower_essentials}><Icon type="tint"/>Shower Essentials</li>
-								<li value={cabininfo.amenities.heating}><Icon type="fire"/>Heating</li>
-								<li value={cabininfo.amenities.airconditioning}><Icon type="refresh"/>Air Conditioning</li>
-								<li value={cabininfo.amenities.washer}><Icon type="square"/>Washer</li>
-								<li value={cabininfo.amenities.dryer}><Icon type="square-o"/>Dryer</li>
-								<li value={cabininfo.amenities.dishwasher}><Icon type="database"/>Dishwasher</li>
-								<li value={cabininfo.amenities.free_parking}><Icon type="hand-o-right"/>Free Parking</li>
-								<li value={cabininfo.amenities.cable}><Icon type="hdd-o"/>Cable</li>
-								<li value={cabininfo.amenities.satellite}><Icon type="hdd-o"/>Satellite</li>
-								<li value={cabininfo.amenities.breakfast}><Icon type="spoon"/>Breakfast</li>
-								<li value={cabininfo.amenities.pets}><Icon type="paw"/>Pets</li>
-								<li value={cabininfo.amenities.kid_friendly}><Icon type="child"/>Kid Friendly</li>
-								<li value={cabininfo.amenities.events} ><Icon type="sun-o"/>Events</li>
-								<li value={cabininfo.amenities.smoking}><Icon type="ban"/>Smoking</li>
-								<li value={cabininfo.amenities.wheelchair_accessible}><Icon type="wheelchair"/>Wheelchair Accessible</li>
-								<li value={cabininfo.amenities.elevator}><Icon type="building-o"/>Elevator</li>
-								<li value={cabininfo.amenities.fireplace}><Icon type="home"/>Fireplace</li>
-								<li value={cabininfo.amenities.intercom}><Icon type="circle-o"/>Intercom</li>
-								<li value={cabininfo.amenities.doorman}><Icon type="bell"/>Doorman</li>
-								<li value={cabininfo.amenities.pool}><Icon type="life-ring"/>Pool</li>
-								<li value={cabininfo.amenities.hottub}><Icon type="heart-o"/>Hot Tub</li>
-								<li value={cabininfo.amenities.gym}><Icon type="futbol-o"/>Gym</li>
-								<li value={cabininfo.amenities.hangers}><Icon type="filter"/>Hangers</li>
-								<li value={cabininfo.amenities.iron}><Icon type="eject"/> Iron</li>
-								<li value={cabininfo.amenities.hair_dryer}><Icon type="cloud"/>Hair Dryer</li>
-								<li value={cabininfo.amenities.workstation}><Icon type="briefcase"/>Workstation</li>
-								<li value={cabininfo.amenities.billiards}><Icon type="circle"/>Billiards</li>
+								<li className={cabininfo.amenities.kitchen}><Icon type="cutlery"/>Kitchen</li>
+								<li className={cabininfo.amenities.internet}><Icon type="wifi"/>Internet</li>
+								<li className={cabininfo.amenities.tv}><Icon type="television"/>Television</li>
+								<li className={cabininfo.amenities.essentials}><Icon type="star"/>Essentials</li>
+								<li className={cabininfo.amenities.shower_essentials}><Icon type="tint"/>Shower Essentials</li>
+								<li className={cabininfo.amenities.heating}><Icon type="fire"/>Heating</li>
+								<li className={cabininfo.amenities.airconditioning}><Icon type="refresh"/>Air Conditioning</li>
+								<li className={cabininfo.amenities.washer}><Icon type="square"/>Washer</li>
+								<li className={cabininfo.amenities.dryer}><Icon type="square-o"/>Dryer</li>
+								<li className={cabininfo.amenities.dishwasher}><Icon type="database"/>Dishwasher</li>
+								<li className={cabininfo.amenities.free_parking}><Icon type="hand-o-right"/>Free Parking</li>
+								<li className={cabininfo.amenities.cable}><Icon type="hdd-o"/>Cable</li>
+								<li className={cabininfo.amenities.satellite}><Icon type="hdd-o"/>Satellite</li>
+								<li className={cabininfo.amenities.breakfast}><Icon type="spoon"/>Breakfast</li>
+								<li className={cabininfo.amenities.pets}><Icon type="paw"/>Pets</li>
+								<li className={cabininfo.amenities.kid_friendly}><Icon type="child"/>Kid Friendly</li>
+								<li className={cabininfo.amenities.events} ><Icon type="sun-o"/>Events</li>
+								<li className={cabininfo.amenities.smoking}><Icon type="ban"/>Smoking</li>
+								<li className={cabininfo.amenities.wheelchair_accessible}><Icon type="wheelchair"/>Wheelchair Accessible</li>
+								<li className={cabininfo.amenities.elevator}><Icon type="building-o"/>Elevator</li>
+								<li className={cabininfo.amenities.fireplace}><Icon type="home"/>Fireplace</li>
+								<li className={cabininfo.amenities.intercom}><Icon type="circle-o"/>Intercom</li>
+								<li className={cabininfo.amenities.doorman}><Icon type="bell"/>Doorman</li>
+								<li className={cabininfo.amenities.pool}><Icon type="life-ring"/>Pool</li>
+								<li className={cabininfo.amenities.hottub}><Icon type="heart-o"/>Hot Tub</li>
+								<li className={cabininfo.amenities.gym}><Icon type="futbol-o"/>Gym</li>
+								<li className={cabininfo.amenities.hangers}><Icon type="filter"/>Hangers</li>
+								<li className={cabininfo.amenities.iron}><Icon type="eject"/> Iron</li>
+								<li className={cabininfo.amenities.hair_dryer}><Icon type="cloud"/>Hair Dryer</li>
+								<li className={cabininfo.amenities.workstation}><Icon type="briefcase"/>Workstation</li>
+								<li className={cabininfo.amenities.billiards}><Icon type="circle"/>Billiards</li>
 							</ul>
 					</div>
 
