@@ -11,8 +11,8 @@ import SimpleSerialForm from 'react-simple-serial-form';
 import Dropzone from 'react-dropzone';
 
 export default class RegisterModal extends Component {
-	constructor(...args){
-		super(...args);
+	constructor(){
+		super();
 		this.state = {
 			preview: 'http://ecx.images-amazon.com/images/I/81mQERthQjL._SL1500_.jpg'
 		}
@@ -20,14 +20,31 @@ export default class RegisterModal extends Component {
 
 	dataHandler(data){
 		console.log('data', data);
+
+		let register = new FormData();
+
+		register.append('first_name', data.first_name);
+		register.append('last_name', data.last_name);
+		register.append('address', data.address);
+		register.append('city', data.city);
+		register.append('state', data.state);
+		register.append('zip', data.zip);
+		register.append('email', data.email);
+		register.append('phone', data.phone);
+		register.append('dob', data.dob);
+		register.append('password', data.password);
+		register.append('avatar', this.file);
+
+		console.log('formdata----->', FormData);
+
 		ajax({
 			url: 'https://cabinfever.herokuapp.com/register',
 			type: 'POST',
-			data: data,
+			data: register,
 			cache: false,
 			dataType: 'json',
-			// processData: false,
-			// contentType: false
+			processData: false,
+			contentType: false
 		}).then( (response) => {
 			console.log('register response--->', response);
 			// if (response.email) { 
@@ -46,7 +63,11 @@ export default class RegisterModal extends Component {
 		};
 
 	dropHandler([file]){
-		this.setState({ preview: file.preview })
+		console.log(file);
+		this.setState({ preview: file.preview });
+		this.file=file;
+
+		console.log("file", this.file);
 	}
 
 	onBack(){
@@ -54,9 +75,10 @@ export default class RegisterModal extends Component {
 	}
 
 	render(){
+		// console.log( )
 		return(
 			<div>
-				<SimpleSerialForm onData={this.dataHandler}>
+				<SimpleSerialForm onData={::this.dataHandler}>
 					<input type="text"     name="first_name" placeholder="First name"                   />
 					<input type="text"     name="last_name"  placeholder="Last name"                    />
 					<input type="text"     name="address"    placeholder="Street"                       />
@@ -70,7 +92,7 @@ export default class RegisterModal extends Component {
 
 					<Dropzone onDrop={ ::this.dropHandler } >
 						<img src={ this.state.preview } height='200px' width='200px' />
-						<input type='hidden' name='avatar' value= { this.state.preview } />
+						<input type='hidden' name='avatar' value= { this.state } />
 					</Dropzone>
 
 					<button>Register</button>
