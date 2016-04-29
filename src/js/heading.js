@@ -25,18 +25,22 @@ export default class Heading extends Component {
 						
 							<input className="search-bar" type="text" placeholder="Search | Cabin Fever"/>
 
-								<div className="heading_property_wrapper">
+								<div className="right-btns-wrapper">
 
-									<select className="heading-select-btn" name="property_type">
+									<div className="heading_property_wrapper">
 
-										<option value={'Cabin'}>Cabin</option>
-										<option value={'Cottage'}>Cottage</option>
-										<option value={'House'}>House</option>
-										<option value={'Apartment'}>Apartment</option>
+										<select className="heading-select-btn" name="property_type">
 
-									</select>
+											<option value={'Cabin'}>Cabin</option>
+											<option value={'Cottage'}>Cottage</option>
+											<option value={'House'}>House</option>
+											<option value={'Apartment'}>Apartment</option>
 
-									<button> Submit </button>
+										</select>
+
+										<button> Submit </button>
+
+									</div>
 						
 								</div>
 

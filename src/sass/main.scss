@@ -16,7 +16,7 @@ form {
 
 .login-link {
   text-decoration: none;
-  color: black;
+  color: white;
   background: #f4c45e;
   padding: 0;
   border-right: 1px dotted white;
@@ -28,7 +28,7 @@ form {
 
 .register-link {
   text-decoration: none;
-  color: black;
+  color: white;
   background: #f4c45e;
   padding: 0;
   border-right: 1px dotted white;
@@ -65,7 +65,7 @@ form {
 .search-bar {
   background-color: #f4c45e;
   border: transparent;
-  color: black;
+  color: white;
   font-size: 18px;
   text-align: center;
   min-height: 59px;
@@ -73,6 +73,10 @@ form {
   /* display: flex; */
   display: block;
   margin: 0;
+}
+
+.search-bar::-webkit-input-placeholder {
+   color: white;
 }
 
 
