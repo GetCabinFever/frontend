@@ -9,16 +9,23 @@ export default class Main extends Component {
 	render(){
 		return(
 			<div className="main">
-			
-				<nav>
-	
-					<Link to="/login"> Log In </Link>
-					
-					<Link to="/register"> Register </Link>
 
-				</nav>
+				<div className="main-hero-img">
 
-				<div className="main-hero-img"></div>
+					<nav>
+
+					</nav>
+
+				</div>
+
+				<div className="aboutme-top">
+				</div>
+
+				<div className="aboutme-middle">
+				</div>
+				
+				<div className="aboutme-bottom">
+				</div>
 				
 			</div>
 		)
@@ -27,3 +34,10 @@ export default class Main extends Component {
 }
 
 
+
+// replaced inside of heading.js/////
+
+		
+						// <Link className="login-link" to="/login"> Log In </Link>
+						
+						// <Link className="register-link"to="/register"> Register </Link>
