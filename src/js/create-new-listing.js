@@ -53,22 +53,9 @@ export default class CreateNewListing extends Component {
 		return(
 			<div className="form_page_wrapper">
 
-				<div className="top_form_header"> 
-					<h1>Fill Out the Forms Below</h1> 
-					<h2>And Thank You For Your Contribution</h2>
-				</div>
-
 					<div className="lower_form_header">
-						<ul>
-							<li>Basics</li>
-							<li>Description</li>
-							<li>Location</li>
-							<li>Ameneties</li>
-							<li>Photos</li>
-							<li>Home Safety</li>
-							<li>Pricing</li>
-							<li>Availability</li>
-							<li>Booking</li>
+						<ul className="nav-ul">
+							<li className="nav-li">Main Info</li>
 						</ul>
 					</div>
 
@@ -76,190 +63,226 @@ export default class CreateNewListing extends Component {
 
 						<SimpleSerialForm onData={::this.dataHandler}>
 
-							<h3>Main Info</h3>
+							<div className="main-info-div">
 
-							<div className="title_input">
-								<label>
-									Title of Page
-									<input type="text" name="title_of_page" />
-								</label>
-							</div>
+								<div className="main-info-div-paralax">
 
-							<div className="address_input">
-								<label>
-									Address
-									<input type="text" name="address" />
-								</label>
-							</div>
+									<div className="main-info-title">
+										<label className="main-label">
+											Title of Page<br/>
+											<input className="form-inputs" type="text" name="title_of_page" />
+										</label>
+									</div>
 
-							<div className="city_input">
-								<label>
-									City
-									<input type="text" name="city" />
-								</label>
-							</div>
+									<div className="address_input">
+										<label className="main-label">
+											Address<br/>
+											<input className="form-inputs" type="text" name="address" />
+										</label>
+									</div>
 
-							<div className="state_input">
-								<label>
-									State
-									<input type="text" name="state" />
-								</label>
-							</div>
+									<div className="city_input">
+										<label className="main-label">
+											City<br/>
+											<input className="form-inputs" type="text" name="city" />
+										</label>
+									</div>
 
-							<div className="zip_input">
-								<label>
-									Zip Code
-									<input type="text" name="zip" />
-								</label>
-							</div>
+									<div className="state_input">
+										<label className="main-label">
+											State<br/>
+											<input className="form-inputs" type="text" name="state" />
+										</label>
+									</div>
 
-							<div className="description_of_listing">
-								<span>Description Of Listing</span>
-								<textarea name="description_of_listing" defaultValue="Paint a picture with your words."> 
-									
-								</textarea>
-							</div>
+									<div className="zip_input">
+										<label className="main-label">
+											Zip Code<br/>
+											<input className="form-inputs" type="text" name="zip" />
+										</label>
+									</div>
 
-							<div className="email_input">
-								<label>
-									Best Contact Email
-									<input type="email" name="contact_host_email" />
-								</label>
-							</div>
+								</div>
 
-							<div className="booking_url_input">
-								<label>
-									Direct Link To Book Space
-									<input type="url" name="booking_url" />
-								</label>
-							</div>
+								<div className="main-info-right">
 
+									<div className="description_of_listing">
+										<span className="main-label">Description Of Listing</span><br/>
+										<textarea className="form-textarea" name="description_of_listing" placeholder="Paint a picture with your words."> 
+											
+										</textarea>
+									</div>
 
-							<h3>Property Info</h3>
+									<div className="email_input">
+										<label className="main-label">
+											Best Contact Email<br/>
+											<input className="form-inputs" type="email" name="contact_host_email" />
+										</label>
+									</div>
 
-							<Dropzone className="dropzone" onDrop={::this.dropHandler}>
-								<label> Property Cover Photo </label>
-								<input type="hidden" value={this.state.preview} name="image"/>
-								<img className="dropzone-img" src={this.state.preview}/>
-							</Dropzone> 
+									<div className="booking_url_input">
+										<label className="main-label">
+											Direct Link To Book Space<br/>
+											<input className="form-inputs" type="url" name="booking_url" />
+										</label>
+									</div>
 
-							<div className="accommodates-wrapper">
-
-								<span> Accommodates </span>
-
-								<select className="select-btn" name="accommodates">
-
-									<option value={1}>1</option>
-									<option value={2}>2</option>
-									<option value={3}>3</option>
-									<option value={4}>4</option>
-									<option value={5}>5</option>
-									<option value={6}>6</option>
-									<option value={7}>7</option>
-									<option value={8}>8+</option>
-
-								</select>
+								</div>
 
 							</div>
 
-							<div className="bedrooms-wrapper">
+									<div className="lower_form_header">
+										<ul className="nav-ul">
+											<li className="nav-li">Property Info</li>
+										</ul>
+									</div>
 
-								<span> Bedrooms </span>
+							<div className="property-wrapper">
 
-								<select className="select-btn" name="bedrooms">
+								<div className="property-div-paralax">
 
-									<option value={1}>1</option>
-									<option value={2}>2</option>
-									<option value={3}>3</option>
-									<option value={4}>4</option>
-									<option value={5}>5</option>
-									<option value={6}>6</option>
-									<option value={7}>7</option>
-									<option value={8}>8+</option>
+									<div className="left-side-property">
 
-								</select>
+										<div className="dropzone-wrapper">
+
+											<Dropzone className="dropzone" onDrop={::this.dropHandler}>
+												<label className="main-label"> Property Photo <br/> </label>
+												<input type="hidden" value={this.state.preview} name="image"/>
+												<img className="dropzone-img" src={this.state.preview}/>
+											</Dropzone> 
+
+										</div>
+
+										<div className="accommodates-wrapper">
+
+											<span className="main-label"> Accommodates<br/> </span>
+
+											<select className="select-btn" name="accommodates">
+
+												<option value={1}>1</option>
+												<option value={2}>2</option>
+												<option value={3}>3</option>
+												<option value={4}>4</option>
+												<option value={5}>5</option>
+												<option value={6}>6</option>
+												<option value={7}>7</option>
+												<option value={8}>8+</option>
+
+											</select>
+
+										</div>
+
+										<div className="bedrooms-wrapper">
+
+											<span className="main-label"> Bedrooms<br/> </span>
+
+											<select className="select-btn" name="bedrooms">
+
+												<option value={1}>1</option>
+												<option value={2}>2</option>
+												<option value={3}>3</option>
+												<option value={4}>4</option>
+												<option value={5}>5</option>
+												<option value={6}>6</option>
+												<option value={7}>7</option>
+												<option value={8}>8+</option>
+
+											</select>
+
+										</div>
+
+										<div className="beds-wrapper">
+
+											<span className="main-label"> Beds<br/> </span>
+
+											<select className="select-btn" name="beds">
+
+												<option value={1}>1</option>
+												<option value={2}>2</option>
+												<option value={3}>3</option>
+												<option value={4}>4</option>
+												<option value={5}>5</option>
+												<option value={6}>6</option>
+												<option value={7}>7</option>
+												<option value={8}>8+</option>
+
+											</select>
+
+										</div>
+
+									</div>
+
+									<div className="right-side-property">
+
+										<div className="bathrooms-wrapper">
+
+											<span className="main-label"> Bathrooms<br/> </span>
+
+											<select className="select-btn" name="bathrooms">
+
+												<option value={1}>1</option>
+												<option value={2}>2</option>
+												<option value={3}>3</option>
+												<option value={4}>4</option>
+												<option value={5}>5</option>
+												<option value={6}>6</option>
+												<option value={7}>7</option>
+												<option value={8}>8+</option>
+
+											</select>
+
+										</div>
+
+										<div className="check_in_input">
+											<label className="main-label">
+												Check-In Time<br/>
+												<input className="select-btn" type="time" name="check_in" />
+											</label>
+										</div>
+
+										<div className="check_out_input">
+											<label className="main-label">
+												Check-Out Time<br/>
+												<input className="select-btn" type="time" name="check_out" />
+											</label>
+										</div>
+
+										<div className="property_type_wrapper">
+
+											<span className="main-label"> Property Type<br/> </span>
+
+											<select className="select-btn" name="property_type">
+
+												<option value={'Cabin'}>Cabin</option>
+												<option value={'Cottage'}>Cottage</option>
+												<option value={'House'}>House</option>
+												<option value={'Apartment'}>Apartment</option>
+
+											</select>
+
+										</div>
+
+										<div className="house_rules">
+											<span className="main-label">House Rules<br/></span>
+											<textarea className="rules-textarea" name="house_rules" defaultValue="How do they take care of the space?"> 
+											</textarea>
+										</div>
+
+									</div>
+
+								</div>
 
 							</div>
 
-							<div className="beds-wrapper">
-
-								<span> Beds </span>
-
-								<select className="select-btn" name="beds">
-
-									<option value={1}>1</option>
-									<option value={2}>2</option>
-									<option value={3}>3</option>
-									<option value={4}>4</option>
-									<option value={5}>5</option>
-									<option value={6}>6</option>
-									<option value={7}>7</option>
-									<option value={8}>8+</option>
-
-								</select>
-
-							</div>
-
-							<div className="bathrooms-wrapper">
-
-								<span> Bathrooms </span>
-
-								<select className="select-btn" name="bathrooms">
-
-									<option value={1}>1</option>
-									<option value={2}>2</option>
-									<option value={3}>3</option>
-									<option value={4}>4</option>
-									<option value={5}>5</option>
-									<option value={6}>6</option>
-									<option value={7}>7</option>
-									<option value={8}>8+</option>
-
-								</select>
-
-							</div>
-
-							<div className="check_in_input">
-								<label>
-									Check-In Time
-									<input type="time" name="check_in" />
-								</label>
-							</div>
-
-							<div className="check_out_input">
-								<label>
-									Check-Out Time
-									<input type="time" name="check_out" />
-								</label>
-							</div>
-
-							<div className="property_type_wrapper">
-
-								<span> Property Type </span>
-
-								<select className="select-btn" name="property_type">
-
-									<option value={'Cabin'}>Cabin</option>
-									<option value={'Cottage'}>Cottage</option>
-									<option value={'House'}>House</option>
-									<option value={'Apartment'}>Apartment</option>
-
-								</select>
-
-							</div>
-
-								<div className="house_rules">
-									<span>House Rules</span>
-									<textarea name="house_rules" defaultValue="How do they take care of the space?"> 
-										
-									</textarea>
+								<div className="lower_form_header">
+									<ul className="nav-ul">
+										<li className="nav-li">Amenities</li>
+									</ul>
 								</div>
 
 							<div className="ameneties_wrapper">
 
-								<h3> Amenities </h3>
-
-								<div>
+								<div className="main-list-wrapper">
 										<label>
 											<input type="checkbox" name="kitchen" value="true"/><Icon type="cutlery"/>Kitchen
 										</label>
@@ -388,9 +411,13 @@ export default class CreateNewListing extends Component {
 
 							</div>
 
-							<div className="description_of_area">
+								<div className="lower_form_header">
+									<ul className="nav-ul">
+										<li className="nav-li">Description Of Area</li>
+									</ul>
+								</div>
 
-								<h3> Description of Area </h3>
+							<div className="description_of_area">
 
 								<div className="description_of_space">
 									<span>Description Of The Space</span>
@@ -434,6 +461,7 @@ export default class CreateNewListing extends Component {
 										<input type="text" name="base_price" />
 									</label>
 								</div>
+
 
 							</div>
 

@@ -11,46 +11,88 @@ export default class Heading extends Component {
 
 		return(
 
-			<div className="heading">
-			
-				<div className="heading-flex">
-		
-					<Link to="/"><div className="home-logo"></div></Link>
+			<div>
+					<div className="heading">
+					
+						<div className="logo-login-reg">
+						<Link to="/"><div className="home-logo"></div></Link>
 
-					<Link className="login-link" to="/login"> Login </Link>
+						<Link className="login-link" to="/login"> Login </Link>
+								
+						<Link className="register-link"to="/register"> Register </Link>
+						</div>
 							
-					<Link className="register-link"to="/register"> Register </Link>
 
-						<SimpleSerialForm>
+						<div className="search-select-submit">
+							<SimpleSerialForm>
+							
+								<input className="search-bar" type="text" placeholder="Search | Cabin Fever"/>
+
 						
-							<input className="search-bar" type="text" placeholder="Search | Cabin Fever"/>
+										<div className="heading_property_wrapper">
 
-								<div className="right-btns-wrapper">
+											<select className="heading-select-btn" name="property_type">
 
-									<div className="heading_property_wrapper">
+												<option value={'Cabin'}>Cabin</option>
+												<option value={'Cottage'}>Cottage</option>
+												<option value={'House'}>House</option>
+												<option value={'Apartment'}>Apartment</option>
 
-										<select className="heading-select-btn" name="property_type">
+											</select>
 
-											<option value={'Cabin'}>Cabin</option>
-											<option value={'Cottage'}>Cottage</option>
-											<option value={'House'}>House</option>
-											<option value={'Apartment'}>Apartment</option>
+											<button className="heading-btn"> Submit </button>
 
-										</select>
-
-										<button> Submit </button>
-
-									</div>
-						
-								</div>
-
-						</SimpleSerialForm>
-
-				</div>
+										</div>
+							
+							</SimpleSerialForm>
+						</div>
+					</div>
 
 				{this.props.children}
 
 			</div>
+
 		)
 	}
 }
+
+// <div className="heading">
+			
+// 				<div className="heading-flex">
+		
+// 					<Link to="/"><div className="home-logo"></div></Link>
+
+// 					<Link className="login-link" to="/login"> Login </Link>
+							
+// 					<Link className="register-link"to="/register"> Register </Link>
+
+// 						<SimpleSerialForm>
+						
+// 							<input className="search-bar" type="text" placeholder="Search | Cabin Fever"/>
+
+// 								<div className="right-btns-wrapper">
+
+// 									<div className="heading_property_wrapper">
+
+// 										<select className="heading-select-btn" name="property_type">
+
+// 											<option value={'Cabin'}>Cabin</option>
+// 											<option value={'Cottage'}>Cottage</option>
+// 											<option value={'House'}>House</option>
+// 											<option value={'Apartment'}>Apartment</option>
+
+// 										</select>
+
+// 										<button> Submit </button>
+
+// 									</div>
+						
+// 								</div>
+
+// 						</SimpleSerialForm>
+
+// 				</div>
+
+// 				{this.props.children}
+
+// 			</div>
