@@ -2,11 +2,11 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import { ajax } from 'jquery';
 
-
- // loose function
 export default class AllPropertiesView extends Component {
-	
-	// constructor - this.state = { properties: [] }
+	constructor(...args){
+		super(...args);
+		this.state = { properties: [] }
+	}
 
 	componentWillMount(){
 		ajax({
@@ -17,24 +17,30 @@ export default class AllPropertiesView extends Component {
 			// processData: false,
 			// contentType: false
 		}).then( response => {
-			console.log('response===>', response) 
+			console.log('residences response===>', response.residences) 
+			this.setState( {properties: response.residences});
 			// this.setState // to new array from response
 		});
 	}
 
-	// makeListing(){x=>x}
-
-	getProperty(propertDetails) {
-		// just use the details you want
+	createResults(response){
+		return(
+			<div className='cabin'>
+				<div>{ response.title_of_page }</div>
+				<div>{ response.image_file_name }</div>
+				<div>{ response.user_id }</div>
+			</div>
+		)
 	}
 
 	render(){
 		// this.state.properties.map( ::this.getProperty  )
 		return (
-			<h1>hello</h1>
+			<div>
+				<h1>halooooooooooo</h1>
+				<div>{ this.state.properties.map(::this.createResults) }</div>
+			</div>
 		)
 	}
 
 }
-
-// <div> { this.getCabins.map(::this.makeListing) } </div>
