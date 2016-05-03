@@ -1,48 +1,40 @@
 import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
 import { ajax } from 'jquery';
 
-export default allPropertiesView extends Component {
-			//LOGIC
-			
-			//this component injects property listings into the user dashboard
-			
-			//make an ajax call to GET residence by ID
-			
-			//create a list item for the property
 
-			//append new property to the component
+ // loose function
+export default class AllPropertiesView extends Component {
+	
+	// constructor - this.state = { properties: [] }
 
-			//last step: inject component into Dashboard
-
-	//retrieve all residences
-	getCabins(){
+	componentWillMount(){
 		ajax({
-			url: 'https://cabinfever.herokuapp.com/residences/:id    request all cabins by USER (email) in this get',
-			type: 'GET';
-			data: data,
+			url: 'https://cabinfever.herokuapp.com/user/dashboard',
+			type: 'GET',
 			cache: false,
 			dataType: 'json',
 			// processData: false,
 			// contentType: false
 		}).then( response => {
-			console.log(response) 
-		)}
+			console.log('response===>', response) 
+			// this.setState // to new array from response
+		});
 	}
 
-	//create a listing for each residence
-	makeListing(cabin){
-		return (
-			<div>
-				<li>{ cabin .... N A M E }</li>
-				<li>{ cabin . . . P I C }</li>
-			</div>
-		)
+	// makeListing(){x=>x}
+
+	getProperty(propertDetails) {
+		// just use the details you want
 	}
 
 	render(){
+		// this.state.properties.map( ::this.getProperty  )
 		return (
-			<div> { getCabins.map(::this.makeListing) } </div>
+			<h1>hello</h1>
 		)
 	}
 
 }
+
+// <div> { this.getCabins.map(::this.makeListing) } </div>
