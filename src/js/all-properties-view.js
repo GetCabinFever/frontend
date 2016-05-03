@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router';
 import ReactDOM from 'react-dom';
 import { ajax } from 'jquery';
 
@@ -25,11 +26,13 @@ export default class AllPropertiesView extends Component {
 
 	createResults(response){
 		return(
-			<div className='cabin'>
-				<div>{ response.title_of_page }</div>
-				<div>{ response.image_file_name }</div>
-				<div>{ response.user_id }</div>
-			</div>
+			<Link key={ response.id } to={ `/generate_new/${response.id}` }>
+				<div className='cabin'>
+					<div>{ response.title_of_page }</div>
+					<div>{ response.image_file_name }</div>
+					<div>{ response.user_id }</div>
+				</div>
+			</Link>
 		)
 	}
 
