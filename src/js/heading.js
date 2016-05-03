@@ -42,7 +42,7 @@ export default class Heading extends Component {
 							
 
 						<div className="search-select-submit">
-							<SimpleSerialForm onData={::this.dataHandler}>
+							<SimpleSerialForm onData={::this.dataHandler} autoComplete="off">
 							
 								<input className="search-bar" type="text" name="search_input" placeholder="Search | Cabin Fever"/>
 

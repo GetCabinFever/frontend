@@ -14,33 +14,50 @@ export default class SearchedPage extends Component {
 	componentWillMount() {
 
 		let { search_input, property_type}  = this.props.params;
+		ajax({
+			url: 'https://cabinfever.herokuapp.com/residences/search',
+			type: 'GET',
+			data: { search_input: search_input, property_type: property_type}, 
+			dataType: 'json',
+			cache: false
+			}).then(response => {
+				console.log('response =>', response);
+				// set state from response to show results
+				this.setState({searchinfo: response})
+			})
+		}
 
+
+	componentWillReceiveProps(props) {
+		let { search_input, property_type}  = props.params;
+		console.log('one', search_input);
+		console.log('two', property_type);
 		ajax({
 			url: 'https://cabinfever.herokuapp.com/residences/search',
 			type: 'GET',
 			data: { search_input, property_type}, 
-			dataType: 'json'
-		}).then(response => {
-			console.log('response =>', response);
-			// set state from response to show results
-			this.setState({searchinfo: response})
-		})
-
-	}
-
+			dataType: 'json',
+			cache: false
+			}).then(response => {
+				console.log('response =>', response);
+				// set state from response to show results
+				this.setState({searchinfo: response})
+			})
+		}
 
 	createResults(response) {
 		return (
-			<div>
+
+			<Link key={response.id} to={`/generate_new/${response.id}`}>
+			<div className="searched-wrapper">
 					<div className="searched-img-div"> 
 						<img className="searched-img" src={response.image}/>
+						<div className="searched-title">{response.title}</div> 
+						<div className="searched-price">Price: ${response.price}</div>
+						<div className="searched-property">Property Type: {response.property_type}</div>
 					</div>
-
-					<div className="searched-title">{response.title}</div> 
-					<div className="searched-price">{response.price}</div>
-					<div className="searched-property">{response.property_type}</div>
-			</div>
-			
+			</div>	
+			</Link>
 		);
 	}
 
@@ -49,9 +66,9 @@ export default class SearchedPage extends Component {
 		return (
 			<div className="searched-page-wrapper">
 
-				<h3> Search Results </h3> 
+				<h3 className="search-title"> Search Results </h3> 
 
-				<div>
+				<div className="searched-flexme">
 					{this.state.searchinfo.map(::this.createResults)}
 				</div>
 

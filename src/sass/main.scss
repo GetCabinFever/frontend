@@ -84,6 +84,7 @@ body {
   /* display: flex; */
   margin: 0;
   outline: none;
+  autocomplete: off;
 }
 
 .heading-btn {
@@ -356,5 +357,59 @@ hr {
   display: flex;
   box-shadow: inset 7px 10px 30px rgba(0, 0, 0, 0.5);
 }
+
+
+// ----------------- START OF SEARCHED PAGE -------------------
+
+.searched-page-wrapper {
+
+}
+
+.searched-flexme {
+  flex-direction: row;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+  justify-content: center;
+}
+
+.searched-wrapper {
+  display: flex;
+  flex-direction: row;
+  height: 250px;
+  width: 250px;
+  border: 1px solid red;
+}
+
+.search-title {
+  text-align: center;
+  background-color: #2a5371;
+  margin: 0;
+  padding: 25px;
+  color: white;
+  font-family: 'Noto Sans', sans-serif;
+  margin-bottom: 25px;
+}
+
+.searched-img {
+  width: 250px;
+  height: 150px;
+}
+
+.searched-title {
+  font-size: 12px;
+}
+
+.searched-price {
+  font-size: 12px;
+}
+
+.searched-property {
+  font-size: 12px;
+}
+
+// ----------------- END OF SEARCHED PAGE -------------------
+
+
 
 
