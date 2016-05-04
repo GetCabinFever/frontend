@@ -18,8 +18,9 @@ export default class AllPropertiesView extends Component {
 			// processData: false,
 			// contentType: false
 		}).then( response => {
-			console.log('residences response===>', response.residences) 
-			this.setState( {properties: response.residences});
+			console.log('response===>', response) 
+			// console.log('residences response===>', response.residences) 
+			this.setState( {properties: response});
 			// this.setState // to new array from response
 		});
 	}
@@ -28,9 +29,9 @@ export default class AllPropertiesView extends Component {
 		return(
 			<Link key={ response.id } to={ `/generate_new/${response.id}` }>
 				<div className='cabin'>
-					<div>{ response.title_of_page }</div>
-					<div><img src='{ response.image_file_name }' /></div>
-					<div>{ response.user_id }</div>
+					<div>{ response.title }</div>
+					<div><img src={ response.image } /></div>
+					<div>{ response.id }</div>
 				</div>
 			</Link>
 		)
@@ -38,6 +39,7 @@ export default class AllPropertiesView extends Component {
 
 	render(){
 		// this.state.properties.map( ::this.getProperty  )
+		let { properties } = this.state;
 		return (
 			<div>
 				<h1>*** My Properties ***</h1>

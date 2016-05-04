@@ -10,6 +10,8 @@ import RegisterModal from './register-modal';
 import LoginModal from './login-modal';
 import GenerateNew from './generate_new';
 import SearchedPage from './searched-page';
+import Cookies from 'js-cookie';
+import { ajax, ajaxSetup } from 'jquery';
 
 let token = Cookies.get('currentUser');
 
