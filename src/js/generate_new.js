@@ -48,7 +48,7 @@ export default class GenerateNew extends Component {
 					</div>
 
 					<div className="property-link">
-
+						<a target="_blank" href={cabininfo.residence.booking_url}>Click Here To Book This Destination</a>
 					</div>	
 
 
@@ -69,6 +69,15 @@ export default class GenerateNew extends Component {
 							<li> Bathrooms: {cabininfo.residence.bathrooms} </li>
 						</ul>
 					</div>
+
+					<div className="schedule-info">
+						<ul>
+							<li> Check-In Time: {cabininfo.residence.check_in} </li>
+							<li> Check-Out Time: {cabininfo.residence.check_out} </li>
+							<li> House Rules: {cabininfo.residence.house_rules} </li>
+						</ul>
+					</div>
+
 
 					<div className="amenities">
 						<h3> Amenities </h3>
@@ -106,6 +115,30 @@ export default class GenerateNew extends Component {
 								<li className={cabininfo.amenities.billiards}><Icon type="circle"/>Billiards</li>
 							</ul>
 					</div>
+
+					<h4> Description Of Area </h4>
+
+					<div className="gen_description_area">
+						<p>Description Of The Space: {cabininfo.residence.the_space}</p>
+					</div>					
+
+					<div className="gen_guest_instructions">
+						<p>Guest Access Instructions: {cabininfo.residence.guest_access}</p>
+					</div>					
+
+					<div className="gen_interaction_guest">
+						<p>Interaction With Guests: {cabininfo.residence.interaction_with_guests}</p>
+					</div>					
+
+					<div className="gen_the_area">
+						<p>What's Going On In The Area? {cabininfo.residence.the_area}</p>
+					</div>					
+
+					<div className="gen_other_things_note">
+						<p>Other Things To Note {cabininfo.residence.other_things_to_note}</p>
+					</div>
+
+
 
 				</div>
 
