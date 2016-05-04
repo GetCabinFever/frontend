@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom';
 import ajaxSetup from 'jquery';
 import { Router, Route, hashHistory, IndexRoute, Link  } from 'react-router';
 import Cookies from 'js-cookie';
+import AllPropertiesView from './all-properties-view';
 
 let currentUser;
 
@@ -21,6 +22,7 @@ export default class Dashboard extends Component {
 		return(
 			<div>
 				<h3>*****Dashboard*****</h3>
+				<AllPropertiesView/>
 				<Link to="/create-new-listing">Create New Listing</Link>
 				<h5>View: </h5>
 				<button>Account</button>

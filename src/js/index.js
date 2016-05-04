@@ -11,6 +11,13 @@ import LoginModal from './login-modal';
 import GenerateNew from './generate_new';
 import SearchedPage from './searched-page';
 
+let token = Cookies.get('currentUser');
+
+if (token) {
+	ajaxSetup({
+		headers: { 'X-Auth-Token': token }
+	})
+} 			
 
 ReactDOM.render((
 	<Router history={hashHistory}>

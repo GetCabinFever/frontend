@@ -40,6 +40,7 @@ export default class CreateNewListing extends Component {
 			type: 'POST',
 			data: data, 
 			cache: false,
+			// header: {"auth_token", Cookies.auth_token},
 			dataType: 'json',
 			processData: false,
 			contentType: false
