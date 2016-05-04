@@ -12,6 +12,8 @@ import GenerateNew from './generate_new';
 import SearchedPage from './searched-page';
 import Cookies from 'js-cookie';
 import { ajax, ajaxSetup } from 'jquery';
+import GuestBookBuilder from './guest-book-builder'
+
 
 let token = Cookies.get('currentUser');
 
@@ -31,6 +33,7 @@ ReactDOM.render((
 			<Route path="/dashboard" component={Dashboard} />
 			<Route path="/generate_new/:cabininfo" component={GenerateNew} />
 			<Route path="/search/:property_type/:search_input" component={SearchedPage} />
+			<Route path="guest-book-builder" component={GuestBookBuilder} />
 		</Route>
 	</Router>
 	), document.querySelector('.app'));
