@@ -47,7 +47,6 @@ export default class SearchedPage extends Component {
 
 	createResults(response) {
 		return (
-
 			<Link key={response.id} to={`/generate_new/${response.id}`}>
 			<div className="searched-wrapper">
 					<div className="searched-img-div"> 
@@ -61,15 +60,27 @@ export default class SearchedPage extends Component {
 		);
 	}
 
+
+
+	getResults() {
+		if ( this.state.searchinfo.length ) {
+			return this.state.searchinfo.map(::this.createResults);
+		} else {
+			return (
+			<h1> No Search Result Was Found </h1> )
+		}
+	}
+
 	render() {
 
 		return (
+
 			<div className="searched-page-wrapper">
 
 				<h3 className="search-title"> Search Results </h3> 
 
 				<div className="searched-flexme">
-					{this.state.searchinfo.map(::this.createResults)}
+					{this.getResults()}
 				</div>
 
 
@@ -78,13 +89,3 @@ export default class SearchedPage extends Component {
 	}
 
 }
-
-		// let { searchinfo } = this.props.params;
-		// ajax({
-		// 	url: 'https://cabinfever.herokuapp.com/residences',
-		// 	type: 'GET',
-		// 	data: data, 
-		// 	dataType: 'json'
-		// }).then(response => {
-		// 	console.log('response =>', response);
-		// })
