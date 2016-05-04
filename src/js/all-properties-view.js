@@ -29,7 +29,7 @@ export default class AllPropertiesView extends Component {
 			<Link key={ response.id } to={ `/generate_new/${response.id}` }>
 				<div className='cabin'>
 					<div>{ response.title_of_page }</div>
-					<div>{ response.image_file_name }</div>
+					<div><img src='{ response.image_file_name }' /></div>
 					<div>{ response.user_id }</div>
 				</div>
 			</Link>
@@ -40,7 +40,7 @@ export default class AllPropertiesView extends Component {
 		// this.state.properties.map( ::this.getProperty  )
 		return (
 			<div>
-				<h1>halooooooooooo</h1>
+				<h1>*** My Properties ***</h1>
 				<div>{ this.state.properties.map(::this.createResults) }</div>
 			</div>
 		)
