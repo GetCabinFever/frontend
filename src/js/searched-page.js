@@ -61,13 +61,12 @@ export default class SearchedPage extends Component {
 	}
 
 
-
 	getResults() {
 		if ( this.state.searchinfo.length ) {
 			return this.state.searchinfo.map(::this.createResults);
 		} else {
 			return (
-			<h1> No Search Result Was Found </h1> )
+			<div> Nothing Was Found </div> )
 		}
 	}
 
