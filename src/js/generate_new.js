@@ -4,7 +4,6 @@ import { Router, Route, hashHistory, IndexRoute, Link } from 'react-router';
 import { ajax } from 'jquery';
 import Icon from './icon';
 
-
 export default class GenerateNew extends Component {
 	constructor(...props){
 		super(...props);

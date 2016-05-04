@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router';
+import { Link, hashHistory } from 'react-router';
 import ReactDOM from 'react-dom';
 import { ajax } from 'jquery';
 
@@ -25,15 +25,33 @@ export default class AllPropertiesView extends Component {
 		});
 	}
 
+	deleteHandler(response){
+		console.log('bruo')
+		ajax({
+			url: `https://cabinfever.herokuapp.com/residences/${response}`,
+			type: 'DELETE'
+		}).then (resp => {
+			console.log('response', resp)
+		// let { properties } = this.state;
+		// console.log('before delete====>', properties);
+		// properties.splice(properties.indexOf(response), 1);
+		// console.log('new array====>', properties);
+		// hashHistory.push("/dashboard");
+		})
+	}
+
 	createResults(response){
 		return(
-			<Link key={ response.id } to={ `/generate_new/${response.id}` }>
-				<div className='cabin'>
-					<div>{ response.title }</div>
-					<div><img src={ response.image } /></div>
-					<div>{ response.id }</div>
-				</div>
-			</Link>
+			<div key={ response.id }>
+				<Link to={ `/generate_new/${response.id}` }>
+					<div className='cabin'>
+						<div>{ response.title }</div>
+						<div><img src={ response.image } /></div>
+						<div>{ response.id }</div>
+					</div>
+				</Link>
+				<button onClick={ this.deleteHandler.bind(null, response.id) }> Delete </button>
+			</div>
 		)
 	}
 
@@ -49,3 +67,11 @@ export default class AllPropertiesView extends Component {
 	}
 
 }
+
+	// deleteHandler(response){
+	// 	let { properties } = this.state;
+	// 	console.log('before delete====>', properties);
+	// 	properties.splice(properties.indexOf(response), 1);
+	// 	console.log('new array====>', properties);
+	// 	hashHistory.push("/dashboard");
+	// }

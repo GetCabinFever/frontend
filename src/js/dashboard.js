@@ -22,8 +22,8 @@ export default class Dashboard extends Component {
 		return(
 			<div>
 				<h3>*****Dashboard*****</h3>
-				<AllPropertiesView/>
 				<Link to="/create-new-listing">Create New Listing</Link>
+				<AllPropertiesView/>
 				<h5>View: </h5>
 				<button>Account</button>
 				<button>Profile Information</button>
