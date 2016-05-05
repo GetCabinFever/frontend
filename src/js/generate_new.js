@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { Router, Route, hashHistory, IndexRoute, Link } from 'react-router';
 import { ajax } from 'jquery';
 import Icon from './icon';
-
+import GuestBook from './guest-book';
 
 export default class GenerateNew extends Component {
 	constructor(...props){
@@ -14,9 +14,10 @@ export default class GenerateNew extends Component {
 	}
 
 	componentWillMount(){
-		let { cabininfo } = this.props.params;
-		// console.log(this.props.params)
-		ajax(`https://cabinfever.herokuapp.com/residences/${cabininfo}`).then(cabininfo => { 
+		let { residence_id } = this.props.params;
+		console.log('residence_id', residence_id);
+				// console.log(this.props.params)
+		ajax(`https://cabinfever.herokuapp.com/residences/${residence_id}`).then(cabininfo => { 
 			// console.log(data);
 
 			this.setState({cabininfo, loading: false});
@@ -164,9 +165,8 @@ export default class GenerateNew extends Component {
 						<h5>{cabininfo.residence.zip}</h5>
 					</div>
 
-					<div className="guestbook">
-					</div>
-
+		
+				<GuestBook cabininfo={this.state.cabininfo}/>
 
 				</div>
 
