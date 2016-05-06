@@ -3,10 +3,7 @@ import ReactDOM from 'react-dom';
 import { Router, Route, hashHistory, IndexRoute, Link } from 'react-router';
 import { ajax } from 'jquery';
 import Icon from './icon';
-<<<<<<< HEAD
 import GuestBook from './guest-book';
-=======
->>>>>>> d3fb42124fcd7fc51c50cfb00a57078ecc0d6757
 
 export default class GenerateNew extends Component {
 	constructor(...props){
