@@ -9,8 +9,16 @@ export default class GuestBook extends Component {
 		super(...props);
 		this.state = {
 			entryNo: 0,
-			def_image: 'http://getuikit.com/docs/images/placeholder_600x400.svg',
-			def_entry: 'Click Sign My Guestbook to add a nice image and entry about your visited!'
+			// def_image: {},
+			// def_entry: {}
+		}
+	}
+
+			// def_image: 'http://getuikit.com/docs/images/placeholder_600x400.svg',
+			// def_entry: 'Click Sign My Guestbook to add a nice image and entry about your visited location!'
+	componentWillMount(){
+		if(this.props.cabininfo.guest_book.length < 1){
+			this.props.cabininfo.guest_book[0] = {image: 'http://fillmurray.com/100/100', entry: 'Click Sign My Guestbook to add a nice image and entry about your visited location!' }
 		}
 	}
 
@@ -25,7 +33,6 @@ export default class GuestBook extends Component {
 
 		} else {
 			this.state.entryNo = this.state.entryNo + 1;
-			console.log(this.state.entryNo);
 			this.setState(this.state);
 		}
 		// forceUpdate(this.entryNo);
@@ -39,7 +46,6 @@ export default class GuestBook extends Component {
 			// console.log('this is the first image');
 			this.state.entryNo = upperLim;
 			this.setState(this.state);
-			// come back to cycling through
 		} else {
 			this.state.entryNo = this.state.entryNo - 1;
 			console.log(this.state.entryNo);
@@ -48,6 +54,13 @@ export default class GuestBook extends Component {
 		// forceUpdate(this.entryNo);
 		// console.log('left-cabininfo.guest_book', cabininfo.guest_book)
 	}
+
+
+// if (cabininfo.guest_book === []) {
+// 	cabininfo.guest_book.image = 'http://getuikit.com/docs/images/placeholder_600x400.svg';
+// 	cabininfo.guest_book.entry = 'Click Sign My Guestbook to add a nice image and entry about your visited location!';
+// }
+
 
 
 
