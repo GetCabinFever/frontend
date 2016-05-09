@@ -1,0 +1,80 @@
+
+.generate-new-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+// -------------------------------- START TOP ----------------------------
+
+.top {
+
+}
+
+.hero-image img {
+	width: 100vw;
+	height: 600px;
+	object-fit: cover;
+}
+
+.top-text-div{
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+}
+
+.title {
+	align-items: center;
+}
+
+.property-description {
+	width: 200px;
+	align-items: flex-end;
+}
+
+.property-link {
+	width: 200px;
+}
+
+
+
+
+
+
+// -------------------------------- END TOP ----------------------------
+
+
+// -------------------------------- START MIDDLE ----------------------------
+
+
+.middle {
+	width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+// -------------------------------- END MIDDLE ----------------------------
+
+
+// -------------------------------- START BOTTOM ----------------------------
+
+.bottom {
+	width: 100%;
+}
+
+
+
+
+
+
+
+
+// -------------------------------- END BOTTOM ----------------------------

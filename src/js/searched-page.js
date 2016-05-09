@@ -7,7 +7,7 @@ export default class SearchedPage extends Component {
 	constructor(...props) {
 		super(...props);
 		this.state = {
-			searchinfo: []
+			listings: []
 		}
 	}
 
@@ -23,7 +23,7 @@ export default class SearchedPage extends Component {
 			}).then(response => {
 				console.log('response =>', response);
 				// set state from response to show results
-				this.setState({searchinfo: response})
+				this.setState({listings: response.listings})
 			})
 		}
 
@@ -41,7 +41,7 @@ export default class SearchedPage extends Component {
 			}).then(response => {
 				console.log('response =>', response);
 				// set state from response to show results
-				this.setState({searchinfo: response})
+				this.setState({listings: response.listings})
 			})
 		}
 
@@ -62,8 +62,9 @@ export default class SearchedPage extends Component {
 
 
 	getResults() {
-		if ( this.state.searchinfo.length ) {
-			return this.state.searchinfo.map(::this.createResults);
+		console.log('this.state.searchinfo.listings===>', this.state.listings);
+		if ( this.state.listings.length ) {
+			return this.state.listings.map(::this.createResults);
 		} else {
 			return (
 			<div> Nothing Was Found </div> )
