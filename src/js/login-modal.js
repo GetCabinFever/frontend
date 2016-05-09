@@ -39,7 +39,7 @@ export default class LoginModal extends Component {
 						<SimpleSerialForm onData={::this.dataHandler}>
 							<input type="email" 	name="email"      placeholder="Email"    />
 							<input type="password"  name="password"   placeholder="Password" />
-							<button>Log In</button>
+							<button className='button-regular-sm'> Log In </button>
 						</SimpleSerialForm>
 
 						<Link to="/"> Cancel </Link>

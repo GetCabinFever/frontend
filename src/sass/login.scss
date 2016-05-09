@@ -20,39 +20,18 @@
 	padding: 5px;
 }
 
-.title {
+@mixin button-regular-sm($fontsize) {
 	color: black;
-	border-radius: 5px;
-	text-align: center;
+	background-color: lighten(gray, 10%);
+	border: 1px solid black;
+	border-radius: 3px;
+	font-size: $fontsize;
+	letter-spacing: .75px;
+	text-decoration: none;
+	margin: 5px 5px;
+	padding: 5px;
 }
 
-#link {
-	// text-align: center;
-	// margin: 0 auto;
-	// display: inline-block;
-	border: 3px solid black;
+.button-regular-sm {
+	@include button-regular-sm(10px);
 }
-
-.center-me {
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-}
-
-.new-listing {
-	@include button-emphasis;
-	text-align: center;
-}
-
-.button-regular {
-	@include button-regular(18px);
-}
-
-.properties {
-	height: 200px;
-	width: 200px;
-	margin: 15px 15px;
-}
-
-
-
