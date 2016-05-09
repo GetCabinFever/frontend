@@ -2,8 +2,7 @@ import React, { Component } from 'react';
 import { Link, hashHistory } from 'react-router';
 import ReactDOM from 'react-dom';
 import { ajax } from 'jquery';
-
-//loose function here 
+import editHandler from './edit-listing';
 
 export default class AllPropertiesView extends Component {
 	constructor(...args){
@@ -17,18 +16,14 @@ export default class AllPropertiesView extends Component {
 			type: 'GET',
 			cache: false,
 			dataType: 'json',
-			// processData: false,
-			// contentType: false
 		}).then( response => {
-			console.log('response===>', response) 
-			// console.log('residences response===>', response.residences) 
+			console.log('response===>', response);
 			this.setState( {properties: response});
-			// this.setState // to new array from response
 		});
 	}
 
 	deleteHandler(property){
-		console.log('bruo')
+		console.log('deleteHandler running +')
 		ajax({
 			url: `https://cabinfever.herokuapp.com/residences/${property.id}`,
 			type: 'DELETE'
@@ -37,11 +32,6 @@ export default class AllPropertiesView extends Component {
 			let { properties } = this.state;
 			properties.splice(properties.indexOf(property), 1);
 			this.setState({properties: properties});
-			// let { properties } = this.state;
-			// console.log('before delete====>', properties);
-			// properties.splice(properties.indexOf(response), 1);
-			// console.log('new array====>', properties);
-			// hashHistory.push("/dashboard");
 		})
 	}
 
@@ -56,12 +46,13 @@ export default class AllPropertiesView extends Component {
 					</div>
 				</Link>
 				<button onClick={ this.deleteHandler.bind(this, property) }> Delete </button>
+				<Link to = { }></Link>
+
 			</div>
 		)
 	}
-
+				
 	render(){
-		// this.state.properties.map( ::this.getProperty  )
 		let { properties } = this.state;
 		return (
 			<div>
@@ -73,13 +64,4 @@ export default class AllPropertiesView extends Component {
 
 }
 
-//alternate code to onClick
-// <button onClick={ () => this.deleteHandler(property) }> Delete </button>
-
-	// deleteHandler(response){
-	// 	let { properties } = this.state;
-	// 	console.log('before delete====>', properties);
-	// 	properties.splice(properties.indexOf(response), 1);
-	// 	console.log('new array====>', properties);
-	// 	hashHistory.push("/dashboard");
-	// }
+//<button onClick={ this.EditListing.bind(this, property) }> Edit </button>
