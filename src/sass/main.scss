@@ -4,6 +4,7 @@
 // @import 'normalize-css/normalize';
 @import 'font-awesome/scss/font-awesome';
 @import './dash';
+@import './main-page';
 
 body {
   padding: 0;
@@ -126,35 +127,6 @@ body {
 
 // --------------------- END OF MAIN --------------------
 
-.heading {
-	text-align: center;	
-}
-
-.modal-back {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  background: rgba(0,0,0,0.7);
-}
-
-.modal {
-  background: white;
-  align-content: center;
-  top: 100px;
-  bottom: 100px;
-  left: 100px;
-  right: 100px;
-  padding: 10px;
-  text-align: center;
-
-  button {
-    margin: 20px;
-  }
-}
-
-.generate_loading {
-  content: url(https://d13yacurqjgara.cloudfront.net/users/82092/screenshots/1073359/spinner.gif);
-}
 
 
 // ----------------- GENERATE NEW PAGE -------------------

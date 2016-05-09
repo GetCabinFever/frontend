@@ -11,11 +11,6 @@ export default class Main extends Component {
 			<div className="main">
 
 				<div className="main-hero-img">
-
-					<nav>
-
-					</nav>
-
 				</div>
 
 				<div className="aboutme-top">
