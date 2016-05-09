@@ -57,15 +57,23 @@
 
 
 .middle {
-	width: 100%;
 	padding-left: 10%;
 	box-shadow: inset 7px 10px 30px rgba(0, 0, 0, 0.5);
 }
 
+.amenities {
+	display: flex;
+	flex-direction: row;
+}
 
-
-
-
+.amenities ul{
+    list-style-type: none;
+    flex-direction: row;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding-right: 10%;
+}
 
 
 
@@ -77,10 +85,43 @@
 // -------------------------------- START BOTTOM ----------------------------
 
 .bottom {
-	width: 100%;
+	width: 100vw;
+	display: flex;
+	justify-content: center;
 }
 
+.host-image img{
+    border-radius: 50%;
+    height: 30vh;
+    width: auto;
+}
 
+.host-info {
+	align-content: space-between;
+}
+
+.gb-main-wrapper{
+	display: flex;
+}
+
+.gb-and-entry {
+	display: flex;
+}
+
+.gb-img {
+   width: 50%;
+   height: 100%;
+   max-width: 350px;
+   min-width: 200px;
+}
+
+.gb-entry {
+  background: white;
+  padding: 25px;
+  padding-top: 100px;
+  width: 200px;
+  text-align: center;
+}
 
 
 
