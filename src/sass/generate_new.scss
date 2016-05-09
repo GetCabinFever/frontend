@@ -8,12 +8,12 @@
 // -------------------------------- START TOP ----------------------------
 
 .top {
-
+	background-color: black;
 }
 
 .hero-image img {
 	width: 100vw;
-	height: 600px;
+	height: 450px;
 	object-fit: cover;
 }
 
@@ -24,20 +24,23 @@
 	align-items: center;
 }
 
-.title {
+.title-top {
 	align-items: center;
 }
 
 .property-description {
-	width: 200px;
+	width: 650px;
 	align-items: flex-end;
 }
 
 .property-link {
-	width: 200px;
+	align-items: center;
+	width: 650px;
 }
 
-
+.top-row-div {
+	flex-direction: row;
+}
 
 
 
