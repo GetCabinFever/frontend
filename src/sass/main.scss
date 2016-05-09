@@ -3,14 +3,13 @@
 // Turn on freq used libraries
 // @import 'normalize-css/normalize';
 @import 'font-awesome/scss/font-awesome';
+@import './dash';
 
 
 body {
   padding: 0;
   margin: 0;
 }
-
-
 
 .login-link {
   text-decoration: none;

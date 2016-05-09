@@ -19,10 +19,24 @@ export default class EditListing extends Component {
 	constructor(...args){
 		super(...args);
 		this.state = {
-			property: {property: property}
+			property: {}
 		}
 	}
 
+
+	componentWillMount() {
+		let property_id = this.props.params.property_id;
+
+		ajax({
+			url: 'https://cabinfever.herokuapp.com/user/dashboard',
+			type: 'GET',
+			cache: false,
+			dataType: 'json',
+		}).then( response => {
+			console.log('property listing ajax response===>', response);
+			this.setState( {properties: response});
+		});
+	}
 
 
 	render(){
@@ -32,6 +46,7 @@ export default class EditListing extends Component {
 		return(
 
 			<div>
+				<span>Hello this works</span>
 				<SimpleSerialForm onData={::this.dataHandler}>
 
 					<div className="main-info-title">

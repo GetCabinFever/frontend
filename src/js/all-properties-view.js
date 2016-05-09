@@ -36,6 +36,7 @@ export default class AllPropertiesView extends Component {
 	}
 
 	createResults(property){
+		// let { property }
 		console.log('property object param < create results ===>', property)
 		return(
 			<div key={ property.id }>
@@ -47,7 +48,7 @@ export default class AllPropertiesView extends Component {
 					</div>
 				</Link>
 				<button onClick={ this.deleteHandler.bind(this, property) }> Delete </button>
-				<Link to={`/edit-listing/${property.id}`}> Edit Listing </Link>
+				
 
 			</div>
 		)
@@ -64,5 +65,7 @@ export default class AllPropertiesView extends Component {
 	}
 
 }
+//FIX ME 
+//<Link to={`/edit-listing/${property.id}`}> Edit Listing </Link>
 
 //<button onClick={ this.EditListing.bind(this, property) }> Edit </button>
