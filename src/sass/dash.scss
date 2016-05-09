@@ -1,5 +1,39 @@
-h3 {
-	color: green
-
+@mixin button-emphasis {
+	color: black;
+	background-color: lighten(yellow, 10%);
+	border: 2px solid black;
+	border-radius: 3px;
+	font-size: 24px;
+	text-decoration: none;
+	margin: 5px 5px;
+	padding: 10px;
 }
+
+@mixin button-regular {
+	color: black;
+	background-color: lighten(gray, 10%);
+	border: 1px solid black;
+	border-radius: 3px;
+	font-size: 18px;
+	text-decoration: none;
+	margin: 5px 5px;
+	padding: 10px;
+}
+
+.title {
+	color: black;
+	border: 2px solid red;
+	border-radius: 5px;
+	text-align: center;
+}
+
+.new-listing {
+	@include button-emphasis;
+}
+
+.button-regular {
+	@include button-regular;
+}
+
+
 

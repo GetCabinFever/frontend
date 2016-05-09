@@ -47,7 +47,7 @@ export default class AllPropertiesView extends Component {
 						<div>{ property.id }</div>
 					</div>
 				</Link>
-				<button onClick={ this.deleteHandler.bind(this, property) }> Delete </button>
+				<button onClick={ this.deleteHandler.bind(this, property) } className='button-regular'> Delete </button>
 				
 
 			</div>
@@ -58,8 +58,14 @@ export default class AllPropertiesView extends Component {
 		let { properties } = this.state;
 		return (
 			<div>
-				<h1>*** My Properties ***</h1>
-				<div>{ this.state.properties.map(::this.createResults) }</div>
+
+				<div className='title'>
+					<h2>My Properties</h2>
+				</div>
+
+				<div className='properties'>
+					{ this.state.properties.map(::this.createResults) }
+				</div>
 			</div>
 		)
 	}

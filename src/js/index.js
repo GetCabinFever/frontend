@@ -43,4 +43,4 @@ ReactDOM.render((
 
 // <Route path="/searched-page/:searchresults" component={SearchedPage} />
 
-			// <Route path="/search/:property_type/:search_input" component={SearchedPage} />
+// <Route path="/search/:property_type/:search_input" component={SearchedPage} />
