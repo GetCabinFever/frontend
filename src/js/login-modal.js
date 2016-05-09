@@ -42,7 +42,7 @@ export default class LoginModal extends Component {
 							<button className='button-regular-sm'> Log In </button>
 						</SimpleSerialForm>
 
-						<Link to="/"> Cancel </Link>
+						<Link to="/" className='button-regular-sm'> Cancel </Link>
 					
 					</div>
 				</div>

@@ -25,6 +25,7 @@
 	background-color: lighten(gray, 10%);
 	border: 1px solid black;
 	border-radius: 3px;
+	font-family: 'Noto Sans', sans-serif;
 	font-size: $fontsize;
 	letter-spacing: .75px;
 	text-decoration: none;
@@ -33,5 +34,5 @@
 }
 
 .button-regular-sm {
-	@include button-regular-sm(10px);
+	@include button-regular-sm(14px);
 }

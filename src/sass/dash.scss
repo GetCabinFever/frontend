@@ -31,6 +31,9 @@
 	// margin: 0 auto;
 	// display: inline-block;
 	border: 3px solid black;
+	text-decoration: none;
+	// margin: 80px 80px;
+	// text-decoration: none;
 }
 
 .center-me {
@@ -48,11 +51,39 @@
 	@include button-regular(18px);
 }
 
-.properties {
-	height: 200px;
-	width: 200px;
-	margin: 15px 15px;
+.cabin {
+	// border: 3px solid red;
+	height: 300px;
+	width: 300px;
+	margin: 30px 30px;
+	border: 2px solid black;
+  	border-radius: 5px;
+  	margin: 20px;
 }
+
+.cabin-info {
+	img{
+		height: 90%;
+		width: 90%;
+		margin: 0 auto;
+	}
+	.cabin-info-title {
+		font-family: Arial; 
+		text-decoration: none;
+		text-align: center;
+		color: black;
+	}
+	.cabin-info-id {
+		font-family: Arial;
+		text-decoration: none;
+		color: black;
+	}
+}
+// .properties {
+// 	height: 200px;
+// 	width: 200px;
+// 	margin: 15px 15px;
+// }
 
 
 

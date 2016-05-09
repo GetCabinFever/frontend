@@ -33,13 +33,14 @@ export default class Dashboard extends Component {
 
 				<AllPropertiesView/>
 
-				<button className='button-regular'>Account</button>
-				<button className='button-regular'>Profile Information</button>
-				<button className='button-regular'>All Property Listings</button>
-				<button className='button-regular'>Contact Us</button>
 				<button onClick={::this.logoutHandler} className='button-regular'>Log Out</button>
 			</div>
 		)
 	}
 
 }
+
+// <button className='button-regular'>Account</button>
+// <button className='button-regular'>Profile Information</button>
+// <button className='button-regular'>All Property Listings</button>
+// <button className='button-regular'>Contact Us</button>

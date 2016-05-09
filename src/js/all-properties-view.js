@@ -39,12 +39,12 @@ export default class AllPropertiesView extends Component {
 		// let { property }
 		console.log('property object param < create results ===>', property)
 		return(
-			<div key={ property.id }>
+			<div key={ property.id } className="cabin">
 				<Link to={ `/generate_new/${property.id}` }>
-					<div className='cabin'>
-						<div>{ property.title }</div>
+					<div className='cabin-info'>
+						<div className='cabin-info-title'>{ property.title }</div>
+						<div className='cabin-info-id'>{ property.id }</div>
 						<div><img src={ property.image } /></div>
-						<div>{ property.id }</div>
 					</div>
 				</Link>
 				<button onClick={ this.deleteHandler.bind(this, property) } className='button-regular'> Delete </button>
