@@ -146,7 +146,7 @@ export default class GenerateNew extends Component {
 					</div>					
 
 					<div className="gen_other_things_note">
-						<p>Other Things To Note {cabininfo.residence.other_things_to_note}</p>
+						<p>Other Things To Note: {cabininfo.residence.other_things_to_note}</p>
 					</div>
 
 
@@ -155,28 +155,35 @@ export default class GenerateNew extends Component {
 
 				<div className="bottom">
 
-					<div className="host-image">
-						<img src={cabininfo.avatar_url}/>
+
+					<div className="host-info">
+
+						<div className="host-image">
+							<img src={cabininfo.avatar_url}/>
+						</div>
+
+						<div className="host-name">
+							<h5>{cabininfo.owner.first_name} {cabininfo.owner.last_name}</h5>
+						</div>
+
+						<div className="host-email">
+							<h5>{cabininfo.residence.contact_host_email}</h5>
+						</div>
+
+						<div className="host-address">
+							<h5>{cabininfo.residence.address}</h5>
+							<h5>{cabininfo.residence.city}</h5>
+							<h5>{cabininfo.residence.state}</h5>
+							<h5>{cabininfo.residence.zip}</h5>
+						</div>
+
 					</div>
 
-					<div className="host-name">
-						<h5>{cabininfo.owner.first_name}</h5>
-						<h5>{cabininfo.owner.last_name}</h5>
-					</div>
+					<div className="guestbook-wrapper">
 
-					<div className="host-email">
-						<h5>{cabininfo.residence.contact_host_email}</h5>
-					</div>
+						<GuestBook cabininfo={this.state.cabininfo}/>
 
-					<div className="host-address">
-						<h5>{cabininfo.residence.address}</h5>
-						<h5>{cabininfo.residence.city}</h5>
-						<h5>{cabininfo.residence.state}</h5>
-						<h5>{cabininfo.residence.zip}</h5>
 					</div>
-
-		
-				<GuestBook cabininfo={this.state.cabininfo}/>
 
 				</div>
 
