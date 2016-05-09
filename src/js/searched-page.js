@@ -27,7 +27,6 @@ export default class SearchedPage extends Component {
 			})
 		}
 
-
 	componentWillReceiveProps(props) {
 		let { search_input, property_type}  = props.params;
 		console.log('one', search_input);
