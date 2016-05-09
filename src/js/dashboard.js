@@ -21,7 +21,9 @@ export default class Dashboard extends Component {
 	render(){
 		return(
 			<div>
-				<h3>*****Dashboard*****</h3>
+				<div className="title">
+					<h3>*****Dashboard*****</h3>
+				</div>
 				<Link to="/create-new-listing">Create New Listing</Link>
 				<AllPropertiesView/>
 				<h5>View: </h5>

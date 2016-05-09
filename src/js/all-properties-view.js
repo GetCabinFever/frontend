@@ -17,7 +17,7 @@ export default class AllPropertiesView extends Component {
 			cache: false,
 			dataType: 'json',
 		}).then( response => {
-			console.log('response===>', response);
+			console.log('property listing ajax response===>', response);
 			this.setState( {properties: response});
 		});
 	}
@@ -36,6 +36,8 @@ export default class AllPropertiesView extends Component {
 	}
 
 	createResults(property){
+		// let { property }
+		console.log('property object param < create results ===>', property)
 		return(
 			<div key={ property.id }>
 				<Link to={ `/generate_new/${property.id}` }>
@@ -46,7 +48,7 @@ export default class AllPropertiesView extends Component {
 					</div>
 				</Link>
 				<button onClick={ this.deleteHandler.bind(this, property) }> Delete </button>
-				<Link to = { }></Link>
+				
 
 			</div>
 		)
@@ -63,5 +65,7 @@ export default class AllPropertiesView extends Component {
 	}
 
 }
+//FIX ME 
+//<Link to={`/edit-listing/${property.id}`}> Edit Listing </Link>
 
 //<button onClick={ this.EditListing.bind(this, property) }> Edit </button>
