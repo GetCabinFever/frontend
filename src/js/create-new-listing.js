@@ -459,7 +459,7 @@ export default class CreateNewListing extends Component {
 								<div className="base_price">
 									<label>
 										Base Price
-										<input type="text" name="base_price" />
+										<input type="number" name="base_price" />
 									</label>
 								</div>
 

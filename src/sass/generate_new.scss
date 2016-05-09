@@ -5,6 +5,7 @@
   align-items: center;
 }
 
+
 // -------------------------------- START TOP ----------------------------
 
 .top {
@@ -13,7 +14,7 @@
 
 .hero-image img {
 	width: 100vw;
-	height: 450px;
+	height: 390px;
 	object-fit: cover;
 }
 
@@ -34,12 +35,16 @@
 }
 
 .property-link {
-	align-items: center;
+	text-align: center;
 	width: 650px;
+	position: relative;
+    top: 9px;
 }
 
 .top-row-div {
 	flex-direction: row;
+	display: flex;
+	margin-bottom: 25px;
 }
 
 
@@ -53,6 +58,8 @@
 
 .middle {
 	width: 100%;
+	padding-left: 10%;
+	box-shadow: inset 7px 10px 30px rgba(0, 0, 0, 0.5);
 }
 
 
