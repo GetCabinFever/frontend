@@ -44,10 +44,10 @@ export default class AllPropertiesView extends Component {
 					<div className='cabin-info'>
 						<div className='cabin-info-title'>{ property.title }</div>
 						<div className='cabin-info-id'>{ property.id }</div>
-						<div><img src={ property.image } /></div>
+						<div className='center-me'><img src={ property.image } /></div>
 					</div>
 				</Link>
-				<button onClick={ this.deleteHandler.bind(this, property) } className='button-regular'> Delete </button>
+				<button onClick={ this.deleteHandler.bind(this, property) } className='button-regular-sm center-me'> Delete </button>
 				
 
 			</div>
