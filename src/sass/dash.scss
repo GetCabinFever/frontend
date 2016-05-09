@@ -20,20 +20,28 @@
 	padding: 5px;
 }
 
+* {
+	font-family: 'Noto Sans', sans-serif;
+	margin: 0;
+}
+
+.dash-background {
+	  background-image: url(http://i.imgur.com/X2yYM3G.jpg);
+	  background-size: cover;
+	  background-position: 30% 50%;
+	  box-shadow: inset 7px 10px 30px rgba(0, 0, 0, 0.5);
+}
+
 .title {
 	color: black;
 	border-radius: 5px;
 	text-align: center;
+	padding: 10px;
 }
 
 #link {
-	// text-align: center;
-	// margin: 0 auto;
-	// display: inline-block;
 	border: 3px solid black;
 	text-decoration: none;
-	// margin: 80px 80px;
-	// text-decoration: none;
 }
 
 .center-me {
@@ -52,20 +60,22 @@
 }
 
 .cabin {
-	// border: 3px solid red;
 	height: 300px;
 	width: 300px;
 	margin: 30px 30px;
 	border: 2px solid black;
   	border-radius: 5px;
+  	background: lighten(gray, 50%);
   	margin: 20px;
 }
 
 .cabin-info {
+
 	img{
 		height: 230px;
 		width: 230px;
 		margin: 0 auto;
+		border-radius: 5px;
 	}
 	.cabin-info-title {
 		font-family: Arial; 

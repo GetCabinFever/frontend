@@ -20,7 +20,7 @@ export default class Dashboard extends Component {
 
 	render(){
 		return(
-			<div>
+			<div className='dash-background'>
 				<div className='title'>
 					<h1> My Dashboard </h1>
 				</div>
