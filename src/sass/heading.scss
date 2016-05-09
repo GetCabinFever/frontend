@@ -1,0 +1,10 @@
+@mixin button-regular-sm($fontsize) {
+	color: black;
+	background-color: lighten(gray, 10%);
+	border: 1px solid black;
+	border-radius: 3px;
+	font-size: $fontsize;
+	text-decoration: none;
+	margin: 5px 5px;
+	padding: 5px;
+}

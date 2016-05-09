@@ -3,9 +3,11 @@
 // Turn on freq used libraries
 // @import 'normalize-css/normalize';
 @import 'font-awesome/scss/font-awesome';
-@import './generate_new';
+@import 'generate_new';
 @import 'dash';
 @import 'main-page';
+@import 'login';
+@import 'heading';
 
 body {
   padding: 0;

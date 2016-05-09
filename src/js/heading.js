@@ -58,7 +58,7 @@ export default class Heading extends Component {
 
 											</select>
 
-											<button className="heading-btn"> Submit </button>
+											<button className='button-regular-sm'> Submit </button>
 
 										</div>
 							

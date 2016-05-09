@@ -63,7 +63,7 @@ export default class AllPropertiesView extends Component {
 					<h2>My Properties</h2>
 				</div>
 
-				<div className='properties'>
+				<div className='properties center-me'>
 					{ this.state.properties.map(::this.createResults) }
 				</div>
 			</div>

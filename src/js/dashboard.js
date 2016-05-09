@@ -25,9 +25,11 @@ export default class Dashboard extends Component {
 					<h1> My Dashboard </h1>
 				</div>
 
-				<Link to='/create-new-listing' className='new-listing'> 
-					Create New Listing 
-				</Link>
+				<div className='center-me'>
+					<Link to='/create-new-listing' className='new-listing' id='link'> 
+						Create New Listing 
+					</Link>
+				</div>
 
 				<AllPropertiesView/>
 
