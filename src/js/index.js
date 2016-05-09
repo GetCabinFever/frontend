@@ -31,9 +31,9 @@ ReactDOM.render((
 			<Route path="/login" component={LoginModal} />
 			<Route path="/create-new-listing" component={CreateNewListing} />
 			<Route path="/dashboard" component={Dashboard} />
-			<Route path="/generate_new/:cabininfo" component={GenerateNew} />
+			<Route path="/generate_new/:residence_id" component={GenerateNew} />
 			<Route path="/search/:property_type/:search_input" component={SearchedPage} />
-			<Route path="guest-book-builder" component={GuestBookBuilder} />
+			<Route path="/guest-book-builder/:residence_id" component={GuestBookBuilder} />
 		</Route>
 	</Router>
 	), document.querySelector('.app'));
