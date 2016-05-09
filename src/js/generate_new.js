@@ -42,16 +42,22 @@ export default class GenerateNew extends Component {
 
 					<div className="top-text-div">
 
-						<div className="title">
+						<div className="title-top">
 							<h1>{cabininfo.residence.title_of_page}</h1>
 						</div>
 
-						<div className="property-description">
-							<p>{cabininfo.residence.description_of_listing}</p>
-						</div>
+						<div className="top-row-div">
 
-						<div className="property-link">
-							<a target="_blank" href={cabininfo.residence.booking_url}>Click Here To Book This Destination</a>
+							<div className="property-description">
+								<img src="http://i.imgur.com/zGaSyXk.png"/>
+								<p>{cabininfo.residence.description_of_listing}</p>
+							</div>
+
+							<div className="property-link">
+								<img src="http://i.imgur.com/vW132EU.png"/>
+								<a target="_blank" href={cabininfo.residence.booking_url}>Click Here To Book This Destination</a>
+							</div>
+
 						</div>	
 
 					</div>
