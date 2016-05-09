@@ -13,6 +13,7 @@ import SearchedPage from './searched-page';
 import Cookies from 'js-cookie';
 import { ajax, ajaxSetup } from 'jquery';
 import GuestBookBuilder from './guest-book-builder'
+import EditListing from './edit-listing';
 
 
 let token = Cookies.get('currentUser');
@@ -34,6 +35,7 @@ ReactDOM.render((
 			<Route path="/generate_new/:residence_id" component={GenerateNew} />
 			<Route path="/search/:property_type/:search_input" component={SearchedPage} />
 			<Route path="/guest-book-builder/:residence_id" component={GuestBookBuilder} />
+			<Route path="/edit-listing/:property_id" component={EditListing} />
 		</Route>
 	</Router>
 	), document.querySelector('.app'));
