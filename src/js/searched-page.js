@@ -66,7 +66,8 @@ export default class SearchedPage extends Component {
 			return this.state.listings.map(::this.createResults);
 		} else {
 			return (
-			<div> Nothing Was Found </div> )
+			<div className="no-search-bg"> </div>
+			)
 		}
 	}
 
