@@ -11,12 +11,19 @@ export default class Main extends Component {
 			<div className="main">
 
 				<div className="main-hero-img">
+					<div className='logo-header'>
+						<div><img src="http://i.imgur.com/FErJOC5.png" /></div>
+					</div>
+
+					<div className='get-started-title'>
+					<h2>Get started today</h2>
+					</div>
 				</div>
 
 				<div className="aboutme-top">
 					<div className='info-section'>
 						<div className='get-started-title'>
-						<h2>Get started today</h2>
+						
 						</div>
 						
 						<div className='three-box-section'>
