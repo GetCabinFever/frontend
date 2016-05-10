@@ -155,7 +155,6 @@ hr {
   background-position: 30% 50%;
   width: 100%;
   height: 650px;
-  display: flex;
   box-shadow: inset 7px 10px 30px rgba(0, 0, 0, 0.5);
 }
 
@@ -163,7 +162,10 @@ hr {
 // -------------- START AMENITIES ----------------
 
 .main-list-wrapper {
-
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding-left: 15%;
 }
 
 .ameneties_wrapper {
@@ -176,12 +178,193 @@ hr {
   box-shadow: inset 7px 10px 30px rgba(0, 0, 0, 0.5);
 }
 
-.main-list-wrapper label {
-  
+.main-list-wrapper input {
+
+}
+
+
+// ------------------ END AMENITIES ----------------
+
+.description_of_area {
+}
+
+.description_of_space {
+  padding: 20px;
+}
+
+.descrip-space-span {
+  font-family: 'Noto Sans', sans-serif;
+  color: white;
+  padding-top: 10px;
+  font-size: 30px;
+  margin-top: 0;
+  text-shadow: 2px 2px 4px #000000;}
+
+.descrip-space {
+  border-radius: 7px;
+  width: 430px;
+  height: 40px;
+  margin-bottom: 20px;
+  border: none;
+  height: 130px;
+  font-size: 18px;
+  height: 80px;
+  box-shadow: 0px 2px 4px #000000;
+}
+
+div.guest_access{
+  padding: 20px;
+}
+
+.guest-span {
+  font-family: 'Noto Sans', sans-serif;
+  color: white;
+  padding-top: 10px;
+  font-size: 30px;
+  margin-top: 0;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+.guest-instruc {
+  border-radius: 7px;
+  width: 430px;
+  height: 40px;
+  margin-bottom: 20px;
+  border: none;
+  height: 130px;
+  font-size: 18px;
+  height: 80px;
+  box-shadow: 0px 2px 4px #000000;
+}
+
+.interaction_with_guests {
+  padding: 20px;
+}
+
+.interact-guest-span {
+  font-family: 'Noto Sans', sans-serif;
+  color: white;
+  padding-top: 10px;
+  font-size: 30px;
+  margin-top: 0;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+.interact-guest {
+  border-radius: 7px;
+  width: 430px;
+  height: 40px;
+  margin-bottom: 20px;
+  border: none;
+  height: 130px;
+  font-size: 18px;
+  height: 80px;
+  box-shadow: 0px 2px 4px #000000;
+}
+
+.the_area {
+  position: relative;
+  top: -549px;
+  left: 500px;
+}
+
+.the-area-span {
+  font-family: 'Noto Sans', sans-serif;
+  color: white;
+  padding-top: 10px;
+  font-size: 30px;
+  margin-top: 0;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+.the-area-textarea {
+  border-radius: 7px;
+  width: 430px;
+  height: 40px;
+  margin-bottom: 20px;
+  border: none;
+  height: 130px;
+  font-size: 18px;
+  height: 80px;
+  box-shadow: 0px 2px 4px #000000;
+}
+
+.other-things-span {
+  font-family: 'Noto Sans', sans-serif;
+  color: white;
+  padding-top: 10px;
+  font-size: 30px;
+  margin-top: 0;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+.other-things-textarea {
+  border-radius: 7px;
+  width: 430px;
+  height: 40px;
+  margin-bottom: 20px;
+  border: none;
+  height: 130px;
+  font-size: 18px;
+  height: 80px;
+  box-shadow: 0px 2px 4px #000000;
+}
+
+div.other_things_to_note {
+  position: relative;
+  top: -700px;
+  left: 980px;
+}
+
+.base_price {
+  position: relative;
+  top: -664px;
+  left: 980px;
+}
+
+.base_price_label {
+  font-family: 'Noto Sans', sans-serif;
+  color: white;
+  padding-top: 10px;
+  font-size: 30px;
+  margin-top: 0;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+.base_price_input {
+  border-radius: 7px;
+  width: 430px;
+  height: 40px;
+  margin-bottom: 20px;
+  border: none;
+  font-size: 18px;
+  box-shadow: 0px 2px 4px #000000;
+}
+
+.double-btns {
+  position: relative;
+  top: -72%;
+  left: 0%;
+  text-align: center;
+}
+
+.submit-btn-create {
+  box-shadow: 0px 2px 4px #000000;
+  margin-bottom: 5px;
+}
+
+.cancel-link{
+  text-decoration: none;
+  background-color: white;
+  border-radius: 4px;
+  color: black;
+  margin-top: 15px;
+  font-size: 10px;
+  padding: 5px;
+  box-shadow: 0px 2px 4px #000000;
+
 }
 
 
 
 
-
-// ------------------ END AMENITIES ----------------
