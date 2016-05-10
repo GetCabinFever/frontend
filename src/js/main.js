@@ -14,21 +14,23 @@ export default class Main extends Component {
 				</div>
 
 				<div className="aboutme-top">
-					<div>
-						<div>
-						Get started today
+					<div className='info-section'>
+						<div className='get-started-title'>
+						<h2>Get started today</h2>
 						</div>
 						
-						<div>
-						Cabin owners list personal property for rent.
-						</div>
+						<div className='three-box-section'>
+							<div className='blue-box'>
+							<span>Cabin owners list personal property for rent.</span>
+							</div>
 
-						<div>
-						Travelers book a long weekend in beautiful North Georgia.
-						</div>
+							<div className='blue-box'>
+							<span>Travelers book a long weekend in beautiful North Georgia.</span>
+							</div>
 
-						<div>
-						Share your experiences and adventures in a virtual guestbook.
+							<div className='blue-box'>
+							<span>Share your experiences and adventures in a virtual guestbook.</span>
+							</div>
 						</div>
 					</div>
 				</div>

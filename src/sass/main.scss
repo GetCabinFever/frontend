@@ -12,6 +12,8 @@
 @import 'create-new-listing';
 @import 'search-results';
 
+$blue-box: #2C5274;
+
 body {
   padding: 0;
   margin: 0;
@@ -125,11 +127,65 @@ body {
 }
 
 .aboutme-top {
+  // border: 2px solid red;
   background-color: #2a5371;
   width: 100%;
-  height: 400px;
+  height: 340px;
   box-shadow: inset 3px 10px 10px rgba(0, 0, 0, 0.5);
+  .info-section {
+  // border: 2px solid yellow;
+  .get-started-title{
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  // margin-bottom: px;
+  // padding: 0;
+  // padding-right: 0px;
+  // padding-left: 35px;  
+  font-size: 1.7em;
+  font-family: 'Noto Sans', sans-serif;
+  letter-spacing: 1px;
+  // line-height: 80px;
+  height: 60px;
+  }
+  .three-box-section{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-content: center;
+  margin-top: 15px;
+  .blue-box {
+  // border: 2px solid white;
+  height: 80px;
+  width: 260px;
+  background-color: lighten($blue-box, 8%);
+  border-radius: 10px;
+  margin: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  padding: 20px;
+  font-family: 'Calibri', sans-serif;
+  font-weight: lighter;
+  letter-spacing: .75px;
+  // line-height: 80px;
+  // height: 60px;
+    box-shadow: inset 2px 5px 5px rgba(0, 0, 0, 0.1);
+  span{
+    // border: 1px solid white;
+    text-align: center;
+    font-size: 1.2em; 
+  }
+  } 
+  }
+  }
 }
+
+////////Blue Triptych////////
+
+//////////////////////////////
 
 // --------------------- END OF MAIN --------------------
 
@@ -253,6 +309,7 @@ hr {
   flex-direction: row;
   margin-top: 85px;
   margin-left: 100px;
+}
 
 
 
