@@ -1,10 +1,16 @@
-@mixin button-regular-sm($fontsize) {
+@mixin button-regular-extra-sm($fontsize) {
 	color: black;
 	background-color: lighten(gray, 10%);
-	border: 1px solid black;
+	// border: .3px solid black;
 	border-radius: 3px;
 	font-size: $fontsize;
+	font-weight: bolder;
 	text-decoration: none;
-	margin: 5px 5px;
-	padding: 5px;
+	// margin: 2px 2px;
+	padding: 2px;
+}
+
+#head-submit-btn {
+	@include button-regular-extra-sm(10px);
+	border: none;
 }

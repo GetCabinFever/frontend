@@ -14,7 +14,7 @@ export default class RegisterModal extends Component {
 	constructor(){
 		super();
 		this.state = {
-			preview: 'http://ecx.images-amazon.com/images/I/81mQERthQjL._SL1500_.jpg'
+			preview: 'http://www.martinezcreativegroup.com/wp-content/uploads/2014/05/img-placeholder.png'
 		}
 	}
 
@@ -77,28 +77,79 @@ export default class RegisterModal extends Component {
 	render(){
 		// console.log( )
 		return(
-			<div>
-				<SimpleSerialForm onData={::this.dataHandler}>
-					<input type="text"     name="first_name" placeholder="First name"                   />
-					<input type="text"     name="last_name"  placeholder="Last name"                    />
-					<input type="text"     name="address"    placeholder="Street"                       />
-					<input type="text"     name="city"       placeholder="City"                         />
-					<input type="text"     name="state"      placeholder="State ex. GA"                 />
-					<input type="text"     name="zip"        placeholder="ZIP ex. 30303"                />
-					<input type="email"    name="email"      placeholder="Email ex. cabin404@gmail.com" />
-					<input type="tel"      name="phone"      placeholder="Phone number"                 />
-					<input type="date"     name="dob"        placeholder=" "                            />
-					<input type="password" name="password"   placeholder="Password"                     />
+			<div className='main'>
 
-					<Dropzone onDrop={ ::this.dropHandler } >
-						<img src={ this.state.preview } height='200px' width='200px' />
-						<input type='hidden' name='avatar' value= { this.state } />
-					</Dropzone>
+				<div className='main-hero-img' id='main-hero-img-reg'>
 
-					<button>Register</button>
-				</SimpleSerialForm>
+					<div  id='register-form'>
 
-				<button onClick={this.onBack}>Cancel</button>
+						<div id='title'>
+						<h1>Register New User</h1>
+						</div>
+
+						<SimpleSerialForm onData={::this.dataHandler}>
+
+							<div>
+							<input type="text"     name="first_name" placeholder="First name"                   />
+							</div>
+
+							<div>
+							<input type="text"     name="last_name"  placeholder="Last name"                    />
+							</div>
+
+							<div>
+							<input type="text"     name="address"    placeholder="Street"                       />
+							</div>
+
+							<div>
+							<input type="text"     name="city"       placeholder="City"                         />
+							</div>
+
+							<div>
+							<input type="text"     name="state"      placeholder="State"                 />
+							</div>
+
+							<div>
+							<input type="text"     name="zip"        placeholder="ZIP"                />
+							</div>
+
+							<div>
+							<input type="email"    name="email"      placeholder="Email" />
+							</div>
+
+							<div>
+							<input type="tel"      name="phone"      placeholder="Phone number"                 />
+							</div>
+
+							<div>
+							<input type="date"     name="dob"        placeholder=" "                            />
+							</div>
+
+							<div>
+							<input type="password" name="password"   placeholder="Password"                     />
+							</div>
+
+							<div id='dropzone-img'>
+							<Dropzone onDrop={ ::this.dropHandler } >
+								<img src={ this.state.preview } height='200px' width='200px' />
+								<input type='hidden' name='avatar' value= { this.state } />
+							</Dropzone>
+							</div>
+
+							<div>
+							<button>Register</button>
+							</div>
+						</SimpleSerialForm>
+
+						<div>
+						<button onClick={this.onBack}>Cancel</button>
+						</div>
+					</div>
+
+				</div>
+
+				<div className='aboutme-top-register'></div>
+
 			</div>
 		)
 	}

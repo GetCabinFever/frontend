@@ -1,7 +1,7 @@
 @mixin button-emphasis {
 	color: black;
-	background-color: lighten(yellow, 10%);
-	border: 2px solid black;
+	background-color: lighten(gray, 20%);
+	// border: 2px solid black;
 	border-radius: 3px;
 	font-size: 24px;
 	text-decoration: none;
@@ -11,8 +11,8 @@
 
 @mixin button-regular($fontsize) {
 	color: black;
-	background-color: lighten(gray, 10%);
-	border: 1px solid black;
+	background-color: lighten(gray, 20%);
+	// border: .5px solid black;
 	border-radius: 3px;
 	font-size: $fontsize;
 	text-decoration: none;
@@ -35,4 +35,38 @@
 
 .button-regular-sm {
 	@include button-regular-sm(14px);
+}
+
+.main {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+  	background-color: white;
+}
+
+#login-flex-parent {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	div {
+		margin: 15px; 
+		font-size: 18px;
+	}
+}
+
+.main-hero-image {
+  background-image: url(http://i.imgur.com/vrbOnrk.jpg);
+  background-size: cover;
+  background-position: 30% 50%;
+  width: 100%;
+  height: 480px;
+  box-shadow: inset 7px 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.aboutme-top-login {
+  background-color: #2a5371;
+  width: 100%;
+  height: 400px;
+  box-shadow: inset 3px 10px 10px rgba(0, 0, 0, 0.5);
 }

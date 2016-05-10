@@ -33,19 +33,36 @@ export default class LoginModal extends Component {
 
 	render(){
 		return(
-			    <div className="modal-back">
-					<div className="modal">
-						
-						<SimpleSerialForm onData={::this.dataHandler}>
-							<input type="email" 	name="email"      placeholder="Email"    />
-							<input type="password"  name="password"   placeholder="Password" />
-							<button className='button-regular-sm'> Log In </button>
-						</SimpleSerialForm>
-
-						<Link to="/" className='button-regular-sm'> Cancel </Link>
+			    <div className="main">
 					
+					<div className="main-hero-img">
+						<div id='login-flex-parent'>
+							<SimpleSerialForm onData={::this.dataHandler}>
+
+								<div id='title'>
+								<h1>Login</h1>
+								</div>
+
+								<div>
+								<input type="email" 	name="email"      placeholder="Email"    />
+								</div>
+								
+								<div>
+								<input type="password"  name="password"   placeholder="Password" />
+								</div>
+								
+								<div>
+								<button className='button-regular-sm'> Log In </button>
+								</div>
+							</SimpleSerialForm>
+
+							<Link to="/" className='button-regular-sm'> Cancel </Link>
+						</div>
 					</div>
-				</div>
+
+					<div className='aboutme-top-login'></div>
+
+			  </div>
 		)	   
 	}
 }

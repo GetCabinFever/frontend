@@ -47,8 +47,10 @@ export default class AllPropertiesView extends Component {
 						<div className='center-me'><img src={ property.image } /></div>
 					</div>
 				</Link>
+
+				<div>
 				<button onClick={ this.deleteHandler.bind(this, property) } className='button-regular-sm center-me'> Delete </button>
-				
+				</div>
 
 			</div>
 		)
