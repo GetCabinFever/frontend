@@ -33,9 +33,9 @@ export default class LoginModal extends Component {
 
 	render(){
 		return(
-			    <div className="modal-back">
-					<div className="modal">
-						
+			    <div className="main">
+					
+					<div className="main-hero-img">
 						<SimpleSerialForm onData={::this.dataHandler}>
 							<input type="email" 	name="email"      placeholder="Email"    />
 							<input type="password"  name="password"   placeholder="Password" />
@@ -43,9 +43,11 @@ export default class LoginModal extends Component {
 						</SimpleSerialForm>
 
 						<Link to="/" className='button-regular-sm'> Cancel </Link>
-					
 					</div>
-				</div>
+
+					<div className='aboutme-top-login'></div>
+
+			  </div>
 		)	   
 	}
 }
