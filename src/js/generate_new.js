@@ -83,8 +83,8 @@ export default class GenerateNew extends Component {
 
 					<div className="schedule-info">
 						<ul>
-							<li> Check-In Time: {cabininfo.residence.check_in} </li>
-							<li> Check-Out Time: {cabininfo.residence.check_out} </li>
+							<li> Check-In Time: {cabininfo.check_in} </li>
+							<li> Check-Out Time: {cabininfo.check_out} </li>
 							<li> House Rules: {cabininfo.residence.house_rules} </li>
 						</ul>
 					</div>

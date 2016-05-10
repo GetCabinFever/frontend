@@ -412,66 +412,68 @@ export default class CreateNewListing extends Component {
 
 							</div>
 
-								<div className="lower_form_header">
-									<ul className="nav-ul">
-										<li className="nav-li">Description Of Area</li>
-									</ul>
-								</div>
+							<div className="lower_form_header">
+								<ul className="nav-ul">
+									<li className="nav-li">Description of Area</li>
+								</ul>
+							</div>
+
 
 							<div className="description_of_area">
 
 								<div className="description_of_space">
-									<span>Description Of The Space</span>
-									<textarea name="the_space" defaultValue="What is it like to be there?"> 
+									<span className="descrip-space-span">Description Of The Space<br/></span>
+									<textarea className="descrip-space" name="the_space" defaultValue="What is it like to be there?"> 
 										
 									</textarea>
 								</div>
 
 								<div className="guest_access">
-									<span>Guest Access Instructions</span>
-									<textarea name="guest_access" defaultValue="How do your guests get in the space?"> 
+									<span className="guest-span">Guest Access Instructions<br/></span>
+									<textarea className="guest-instruc" name="guest_access" defaultValue="How do your guests get in the space?"> 
 										
 									</textarea>
 								</div>
 
 								<div className="interaction_with_guests">
-									<span>Interaction With Guests</span>
-									<textarea name="interaction_with_guests" defaultValue="Will you interact with your guests?"> 
+									<span className="interact-guest-span">Interaction With Guests<br/></span>
+									<textarea className="interact-guest" name="interaction_with_guests" defaultValue="Will you interact with your guests?"> 
 										
 									</textarea>
 								</div>
 
 								<div className="the_area">
-									<span>What's going on in the area?</span>
-									<textarea name="the_area" defaultValue="Any recommendations?"> 
+									<span className="the-area-span">What's going on in the area?<br/></span>
+									<textarea className="the-area-textarea" name="the_area" defaultValue="Any recommendations?"> 
 										
 									</textarea>
 								</div>
 
 								<div className="other_things_to_note">
-									<span>Other Things To Note</span>
-									<textarea name="other_things_to_note" defaultValue="Safety Notes, Special Instructions, A nice message"> 
+									<span className="other-things-span">Other Things To Note<br/></span>
+									<textarea className="other-things-textarea" name="other_things_to_note" defaultValue="Safety Notes, Special Instructions, A nice message"> 
 										
 									</textarea>
 								</div>
 
 
 								<div className="base_price">
-									<label>
-										Base Price
-										<input type="text" name="base_price" />
+									<label className="base_price_label">
+										Base Price<br/>
+										<input className="base_price_input" type="text" name="base_price" />
 									</label>
 								</div>
 
-
+								<div className="double-btns">
+									<button className="submit-btn-create" type="submit">Submit</button><br/>
+									<Link className="cancel-link" to="/dashboard">Cancel</Link>
+								</div>
 							</div>
 
-							<button type="submit">Submit</button>
 
 						</SimpleSerialForm>
 					</div>
 
-				<Link to="/dashboard">Cancel</Link>
 			</div>
 		)
 	}
