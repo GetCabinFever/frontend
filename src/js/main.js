@@ -14,6 +14,25 @@ export default class Main extends Component {
 				</div>
 
 				<div className="aboutme-top">
+					<div className='info-section'>
+						<div className='get-started-title'>
+						<h2>Get started today</h2>
+						</div>
+						
+						<div className='three-box-section'>
+							<div className='blue-box'>
+							<span>Cabin owners list personal property for rent.</span>
+							</div>
+
+							<div className='blue-box'>
+							<span>Travelers book a long weekend in beautiful North Georgia.</span>
+							</div>
+
+							<div className='blue-box'>
+							<span>Share your experiences and adventures in a virtual guestbook.</span>
+							</div>
+						</div>
+					</div>
 				</div>
 
 				<div className="aboutme-middle">
@@ -28,7 +47,13 @@ export default class Main extends Component {
 
 }
 
-
+//<div className='lower_form_header'>
+//<div className='nav-ul'>
+//<div className='nav-li'>
+//<span>Cabin Fever</span>
+//</div>
+//</div>
+//</div>
 
 // replaced inside of heading.js/////
 
