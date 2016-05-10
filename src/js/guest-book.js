@@ -74,14 +74,14 @@ export default class GuestBook extends Component {
 			
 			<div className="gb-main-wrapper">
 				<div className="gb-and-entry">
-					<img className="gb-img" src={cabininfo.guest_book[this.state.entryNo].image} />
+					<img className="gb-img" src={cabininfo.guest_book[this.state.entryNo].image}/>
 					<div className="gb-entry">{cabininfo.guest_book[this.state.entryNo].entry}</div>
 						<div className="gb-btns">
 							<button onClick={::this.leftClickHandler}className="gb-left-btn"><Icon type="arrow-left"/></button>				
 							<button onClick={::this.rightClickHandler}className="gb-right-btn"><Icon type="arrow-right"/></button>
 						</div>
-				</div>
 				<Link to={`/guest-book-builder/${cabininfo.residence.id}`}><button className="gb-sign-btn">Sign My Guestbook</button></Link>	
+				</div>
 			</div>
 
 		);

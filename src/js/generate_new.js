@@ -37,7 +37,7 @@ export default class GenerateNew extends Component {
 				<div className="top">
 
 					<div className="hero-image">
-						<img src={cabininfo.image_url}/>
+						<img className="hero-img" src={cabininfo.image_url}/>
 					</div>
 
 					<div className="top-text-div">
@@ -172,9 +172,7 @@ export default class GenerateNew extends Component {
 
 						<div className="host-address">
 							<h5>{cabininfo.residence.address}</h5>
-							<h5>{cabininfo.residence.city}</h5>
-							<h5>{cabininfo.residence.state}</h5>
-							<h5>{cabininfo.residence.zip}</h5>
+							<h5>{cabininfo.residence.city}, {cabininfo.residence.state} {cabininfo.residence.zip}</h5>
 						</div>
 
 					</div>
