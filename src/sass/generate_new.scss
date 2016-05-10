@@ -32,6 +32,7 @@
 .property-description {
 	width: 650px;
 	align-items: flex-end;
+	text-align: center;
 }
 
 .property-link {
@@ -47,6 +48,10 @@
 	margin-bottom: 25px;
 }
 
+.hero-img {
+	box-shadow: inset 7px 10px 30px rgba(0, 0, 0, 0.5);
+
+}
 
 
 
@@ -78,16 +83,17 @@
 
 
 
-
 // -------------------------------- END MIDDLE ----------------------------
 
 
 // -------------------------------- START BOTTOM ----------------------------
 
 .bottom {
-	width: 100vw;
-	display: flex;
-	justify-content: center;
+   width: 100vw;
+   display: flex;
+   justify-content: center;
+   padding-top: 35px;
+   padding-bottom: 35px;
 }
 
 .host-image img{
@@ -98,9 +104,12 @@
 
 .host-info {
 	align-content: space-between;
+	margin: 0;
+	text-align: center;
+	margin-top: 25px;
 }
 
-.gb-main-wrapper{
+.gb-main-wrapper {
 	display: flex;
 }
 
@@ -109,10 +118,8 @@
 }
 
 .gb-img {
-   width: 50%;
-   height: 100%;
-   max-width: 350px;
-   min-width: 200px;
+  width: 300px;
+  height: 250px;
 }
 
 .gb-entry {
@@ -120,11 +127,38 @@
   padding: 25px;
   padding-top: 100px;
   width: 200px;
+  max-width: 350px;
+  min-width: 200px;
   text-align: center;
+  border: 1px solid black;
 }
 
+.gb-btns {
+  display: flex;
+  align-content: stretch;
+}
 
+.gb-sign-btn {
+	background-color: #6ccafb;
+    height: 250px;
+	border: 2px solid #3696c2;
+}
 
+div h5 {
+	margin: 0;
+}
+
+.guestbook-wrapper {
+  margin-left: 140px;
+  background-color: #f4c45e;
+  border: 5px solid black;
+  border-radius: 8px;
+  box-shadow: inset 0px -10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.gb-img {
+	border: 1px solid black;
+}
 
 
 
