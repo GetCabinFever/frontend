@@ -14,6 +14,23 @@ export default class Main extends Component {
 				</div>
 
 				<div className="aboutme-top">
+					<div>
+						<div>
+						Get started today
+						</div>
+						
+						<div>
+						Cabin owners list personal property for rent.
+						</div>
+
+						<div>
+						Travelers book a long weekend in beautiful North Georgia.
+						</div>
+
+						<div>
+						Share your experiences and adventures in a virtual guestbook.
+						</div>
+					</div>
 				</div>
 
 				<div className="aboutme-middle">
@@ -28,7 +45,13 @@ export default class Main extends Component {
 
 }
 
-
+//<div className='lower_form_header'>
+//<div className='nav-ul'>
+//<div className='nav-li'>
+//<span>Cabin Fever</span>
+//</div>
+//</div>
+//</div>
 
 // replaced inside of heading.js/////
 
