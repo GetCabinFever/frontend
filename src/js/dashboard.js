@@ -20,20 +20,24 @@ export default class Dashboard extends Component {
 
 	render(){
 		return(
-			<div className='dash-background'>
-				<div className='title'>
-					<h1> My Dashboard </h1>
+			<div>
+				<div className='dash-background'>
+					<div className='title'>
+						<h1> My Dashboard </h1>
+					</div>
+
+					<div className='center-me'>
+						<Link to='/create-new-listing' className='new-listing' id='link'> 
+							Create New Listing 
+						</Link>
+					</div>
+
+					<AllPropertiesView/>
+
+					<button onClick={::this.logoutHandler} className='button-regular'>Log Out</button>
 				</div>
 
-				<div className='center-me'>
-					<Link to='/create-new-listing' className='new-listing' id='link'> 
-						Create New Listing 
-					</Link>
-				</div>
-
-				<AllPropertiesView/>
-
-				<button onClick={::this.logoutHandler} className='button-regular'>Log Out</button>
+				<div className='aboutme-top-dash'></div>
 			</div>
 		)
 	}
