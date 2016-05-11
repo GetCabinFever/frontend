@@ -83,7 +83,7 @@ export default class RegisterModal extends Component {
 
 					<div  id='register-form'>
 
-						<div id='title'>
+						<div id='title register'>
 						<h1>Register New User</h1>
 						</div>
 
@@ -137,13 +137,11 @@ export default class RegisterModal extends Component {
 							</div>
 
 							<div>
-							<button>Register</button>
+							<button className='button-regular' id='reg-page'>Register</button>
 							</div>
 						</SimpleSerialForm>
 
-						<div>
-						<button onClick={this.onBack}>Cancel</button>
-						</div>
+						
 					</div>
 
 				</div>
@@ -154,3 +152,14 @@ export default class RegisterModal extends Component {
 		)
 	}
 }
+//****************Remove Cancel Button***********************
+//<div>
+//<button onClick={this.onBack} className='button-regular' id='reg-page'>Cancel</button>
+//</div>
+
+
+
+
+
+
+
