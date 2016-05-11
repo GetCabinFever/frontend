@@ -13,6 +13,7 @@ export default class CreateNewListing extends Component {
 		super();
 		this.state={
 			preview: 'http://www.martinezcreativegroup.com/wp-content/uploads/2014/05/img-placeholder.png',
+			processing: false
 		}
 	}
 
@@ -34,6 +35,7 @@ export default class CreateNewListing extends Component {
 			data.append('image', this.file);
 		})
 
+		this.setState({processing: true})
 
 		ajax({
 			url: 'https://cabinfever.herokuapp.com/residences',
@@ -45,13 +47,13 @@ export default class CreateNewListing extends Component {
 			processData: false,
 			contentType: false
 		}).then ( response => { 
+			this.setState({processing: false})
 			hashHistory.push(`/generate_new/${response.residence.id}`)
 		});
 	}
 
-
-	render(){
-		return(
+renderPage(){
+	return(
 			<div className="form_page_wrapper">
 
 					<div className="lower_form_header">
@@ -463,11 +465,12 @@ export default class CreateNewListing extends Component {
 										<input className="base_price_input" type="text" name="base_price" />
 									</label>
 								</div>
-
+		
 								<div className="double-btns">
 									<button className="submit-btn-create" type="submit">Submit</button><br/>
 									<Link className="cancel-link" to="/dashboard">Cancel</Link>
 								</div>
+
 							</div>
 
 
@@ -477,6 +480,18 @@ export default class CreateNewListing extends Component {
 			</div>
 		)
 	}
+	renderProcessing(){
+		return (
+			<div>Processing...</div>
+			)
+}
+		render(){
+			let { processing } = this.state;
+			return (processing
+			? this.renderProcessing()
+			: this.renderPage()
+			)
+		}
 
 }
 
