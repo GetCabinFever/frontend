@@ -11,6 +11,7 @@
 @import 'heading';
 @import 'create-new-listing';
 @import 'search-results';
+@import 'guest-book-builder';
 
 $blue-box: #2C5274;
 
@@ -172,6 +173,8 @@ body {
   font-size: 1.7em;
   font-family: 'Noto Sans', sans-serif;
   letter-spacing: 1px;
+  display: inline-block;
+
   // line-height: 80px;
   height: 60px;
   }
