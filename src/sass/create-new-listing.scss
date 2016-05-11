@@ -154,7 +154,6 @@ hr {
   background-size: cover;
   background-position: 30% 50%;
   width: 100%;
-  height: 650px;
   box-shadow: inset 7px 10px 30px rgba(0, 0, 0, 0.5);
 }
 
@@ -266,6 +265,7 @@ div.guest_access{
   position: relative;
   top: -549px;
   left: 500px;
+  display: inline-block;
 }
 
 .the-area-span {
@@ -312,14 +312,16 @@ div.guest_access{
 
 div.other_things_to_note {
   position: relative;
-  top: -700px;
-  left: 980px;
+  top: -550px;
+  left: 550px;
+  display: inline-block;
 }
 
 .base_price {
   position: relative;
-  top: -664px;
-  left: 980px;
+  top: -494px;
+  left: 120px;
+  display: inline-block;
 }
 
 .base_price_label {
@@ -343,8 +345,8 @@ div.other_things_to_note {
 
 .double-btns {
   position: relative;
-  top: -72%;
-  left: 0%;
+  top: -70px;
+  left: -1%;
   text-align: center;
 }
 
