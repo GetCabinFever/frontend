@@ -52,11 +52,11 @@ export default class LoginModal extends Component {
 								</div>
 								
 								<div>
-								<button className='button-regular-sm'> Log In </button>
+								<button className='button-regular-sm' id='log-in-btn-special'> Log In </button>
 								</div>
 							</SimpleSerialForm>
 
-							<Link to="/" className='button-regular-sm'> Cancel </Link>
+							
 						</div>
 					</div>
 
@@ -66,5 +66,8 @@ export default class LoginModal extends Component {
 		)	   
 	}
 }
+
+//*************Remove Cancel Button**************
+//<Link to="/" className='button-regular-sm'> Cancel </Link>
 
 // 'Auth-token'
