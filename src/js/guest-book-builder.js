@@ -62,7 +62,7 @@ export default class GuestBookBuilder extends Component {
 						
 					</textarea>
 				</div>
-				<button>Save</button>
+				<button className="save-btn-gb">Save</button>
 			</div>
 			</SimpleSerialForm>
 		);
