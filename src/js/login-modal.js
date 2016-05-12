@@ -35,7 +35,7 @@ export default class LoginModal extends Component {
 		return(
 			    <div className="main">
 
-					<div className="main-hero-img">
+					<div className="main-hero-img-login">
 						
 						<div className="login-dark-bg"></div>
 

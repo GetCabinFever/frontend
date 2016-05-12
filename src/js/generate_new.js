@@ -192,7 +192,10 @@ export default class GenerateNew extends Component {
 	
 
 renderLoading(){
-	return (<div className="generate_loading"></div>)
+	return (
+		
+		<div className="generate_loading"></div>
+	)
 }
 
 	render() {
