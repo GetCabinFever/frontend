@@ -34,9 +34,13 @@ export default class LoginModal extends Component {
 	render(){
 		return(
 			    <div className="main">
-					
+
 					<div className="main-hero-img">
+						
+						<div className="login-dark-bg"></div>
+
 						<div id='login-flex-parent'>
+
 							<SimpleSerialForm onData={::this.dataHandler}>
 
 								<div id='title'>
@@ -54,6 +58,7 @@ export default class LoginModal extends Component {
 								<div>
 								<button className='button-regular-sm' id='log-in-btn-special'> Log In </button>
 								</div>
+
 							</SimpleSerialForm>
 
 							
