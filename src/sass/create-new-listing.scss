@@ -57,6 +57,7 @@ ul {
   color: white;
   padding-right: 20px;
   font-size: 24px;
+  text-shadow: 2px 2px 4px #000000;
 }
 
 .form-inputs {
@@ -241,7 +242,7 @@ div.guest_access {
 
 .interaction_with_guests {
   display: inline-block;
-  margin: 10px;
+  margin-top: 10px;
 }
 
 .interact-guest-span {
@@ -342,24 +343,35 @@ div.other_things_to_note {
 }
 
 .double-btns {
-  justify-content: flex-end;
+  top: 50px;
+  left: 20px;
+  position: relative;
 }
 
 .submit-btn-create {
+  border: none;
   box-shadow: 0px 2px 4px #000000;
   margin-bottom: 5px;
+  background-color: white;
+  &:hover{
+    background-color: #e5ad37;
+    transition: .3s;
+  }
 }
 
 .cancel-link{
   text-decoration: none;
   background-color: white;
-  border-radius: 4px;
+  &:hover {
+    background-color: #3f7094;
+    transition: .3s;
+  }
+  /* border-radius: 4px; */
   color: black;
   margin-top: 15px;
-  font-size: 10px;
-  padding: 5px;
-  box-shadow: 0px 2px 4px #000000;
-
+  font-size: 11px;
+  padding: 3px 8px 3px 8px;  
+  box-shadow: 0px 3px 5px #000000;
 }
 
 

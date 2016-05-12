@@ -81,52 +81,56 @@ export default class RegisterModal extends Component {
 
 				<div className='main-hero-img' id='main-hero-img-reg'>
 
-					<div  id='register-form'>
+				  <div className="login-dark-bg"></div>
+	
 
-						<div id='title register'>
-						<h1>Register New User</h1>
-						</div>
+					<div  className="register-form-div" id='register-form'>
+
 
 						<SimpleSerialForm onData={::this.dataHandler}>
 
-							<div>
-							<input type="text"     name="first_name" placeholder="First name"                   />
+							<div id='title register'>
+							<h1>Register New User</h1>
 							</div>
 
 							<div>
-							<input type="text"     name="last_name"  placeholder="Last name"                    />
+							<input className="reg-inputs" type="text"     name="first_name" placeholder="First name"                   />
 							</div>
 
 							<div>
-							<input type="text"     name="address"    placeholder="Street"                       />
+							<input className="reg-inputs" type="text"     name="last_name"  placeholder="Last name"                    />
 							</div>
 
 							<div>
-							<input type="text"     name="city"       placeholder="City"                         />
+							<input className="reg-inputs" type="text"     name="address"    placeholder="Street"                       />
 							</div>
 
 							<div>
-							<input type="text"     name="state"      placeholder="State"                 />
+							<input className="reg-inputs" type="text"     name="city"       placeholder="City"                         />
 							</div>
 
 							<div>
-							<input type="text"     name="zip"        placeholder="ZIP"                />
+							<input className="reg-inputs" type="text"     name="state"      placeholder="State"                 />
 							</div>
 
 							<div>
-							<input type="email"    name="email"      placeholder="Email" />
+							<input className="reg-inputs" type="text"     name="zip"        placeholder="ZIP"                />
 							</div>
 
 							<div>
-							<input type="tel"      name="phone"      placeholder="Phone number"                 />
+							<input className="reg-inputs" type="email"    name="email"      placeholder="Email" />
 							</div>
 
 							<div>
-							<input type="date"     name="dob"        placeholder=" "                            />
+							<input className="reg-inputs" type="tel"      name="phone"      placeholder="Phone number"                 />
 							</div>
 
 							<div>
-							<input type="password" name="password"   placeholder="Password"                     />
+							<input className="reg-inputs" type="date"     name="dob"        placeholder=" "                            />
+							</div>
+
+							<div>
+							<input className="reg-inputs" type="password" name="password"   placeholder="Password"                     />
 							</div>
 
 							<div id='dropzone-img'>
