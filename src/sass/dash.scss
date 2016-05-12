@@ -75,8 +75,9 @@ $light-yellow: #FBCA41;
 	margin-top: 35px;
 	text-decoration: none;
 	color: white;
-	background-color: lighten($light-yellow, 20%);
+	background-color: lighten($light-yellow, 10%);
 	text-shadow: 1px 1px 2px lighten(black, 10%);
+	box-shadow: 3px 12px 24px rgba(0, 0, -1, 0.5);
 }
 
 .center-me {
@@ -177,6 +178,7 @@ $light-yellow: #FBCA41;
 	overflow: scroll; 
 	margin: 10px auto 10px auto;
 	padding: 5px 20px 5px 20px;
+	box-shadow: 3px 12px 24px rgba(0, 0, -1, 0.5);
 
 }
 
