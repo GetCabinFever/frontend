@@ -482,7 +482,7 @@ renderPage(){
 	}
 	renderProcessing(){
 		return (
-			<div>Processing...</div>
+				<div className="loading-bg"></div>
 			)
 }
 		render(){
