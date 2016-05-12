@@ -45,7 +45,7 @@
 
 .search-title{
 
-  border: 1px solid white;
+  // border: 1px solid white;
   color: white;
   border-radius: 5px;
   text-align: center;
@@ -61,9 +61,15 @@
 
 }
 
+.cabin-property-line {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
 .searched-img-div {
 
-  border: 1px solid orange;
+  // border: 1px solid orange;
   height: 280px;
   width: 280px;
   margin: 30px 30px;
@@ -76,7 +82,7 @@
   align-items: center;
   div {
 
-  border: 1px solid black;
+  // border: 1px solid black;
   margin: 0px;
   color: white;
   font-weight: lighter;
@@ -84,8 +90,11 @@
 
   }
   img {
+    // border: 1px solid red;
     margin: 10px;
+    box-shadow:  3px 10px 10px rgba(0, 0, 0, 0.5);
   }
+
 }
 
 .searched-img{
@@ -98,6 +107,7 @@
 
 .searched-title {
   font-family: Arial; 
+  font-size: 1em;
   text-decoration: none;
   text-align: center;
   color: black;
@@ -111,8 +121,8 @@
 }
 
 .searched-property{
-
-  border: 1px solid pink;
+  font-family: Arial; 
+  font-size: 1em;
     }
 
 .no-search-bg {
