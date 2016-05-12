@@ -12,6 +12,7 @@
 @import 'create-new-listing';
 @import 'search-results';
 @import 'guest-book-builder';
+@import 'heading';
 
 $blue-box: #2C5274;
 
@@ -43,69 +44,6 @@ body {
   line-height: 80px;
   height: 60px;
 }
-
-// --------------------- HEADING --------------------
-
-.heading {
-  display: flex;
-  background-color: #f4c45e;
-}
-
-.logo-login-reg{
-  padding: 0;
-  margin: 0;
-  display: flex;
-}
-
-.heading_property_wrapper{
-  margin-top: -14px;
-  padding: 0px;
-  width: 100%;
-}
-
-.search-select-submit {
-  display: flex;
-  justify-content: center;
-  margin-left: 25%;
-}
-
-.heading-flex{
-  // display:flex;
-  // flex-direction:row;
-  background-color: #f4c45e;
-}
-
-.home-logo{
-  content: url(http://i.imgur.com/e6ZMPCc.jpg);
-  height: 81px;
-  margin: 0;
-  padding: 0;
-}
-
-.search-bar {
-  background-color: #f4c45e;
-  border: transparent;
-  color: white;
-  font-size: 18px;
-  text-align: center;
-  min-height: 59px;
-  /* display: flex; */
-  margin: 0;
-  outline: none;
-  autocomplete: off;
-}
-
-.heading-btn {
-  margin-left: 5px;
-}
-
-.search-bar::-webkit-input-placeholder {
-   color: white;
-}
-
-
-
-// --------------------- END OF HEADING --------------------
 
 
 
@@ -142,9 +80,10 @@ body {
 
 .get-started-title{
     position: relative;
-    top: -10%;
-    left: 19%;
+    top: -50px;
+    left: 57%;
     text-align: center;
+    display: inline-block;
     text-decoration: none;
     color: white;
     font-size: 1.7em;

@@ -1,16 +1,59 @@
-@mixin button-regular-extra-sm($fontsize) {
-	color: black;
-	background-color: lighten(gray, 10%);
-	// border: .3px solid black;
-	border-radius: 3px;
-	font-size: $fontsize;
-	font-weight: bolder;
-	text-decoration: none;
-	// margin: 2px 2px;
-	padding: 2px;
+.heading {
+  display: flex;
+  background-color: #f4c45e;
 }
 
-#head-submit-btn {
-	@include button-regular-extra-sm(10px);
-	border: none;
+.logo-login-reg{
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.heading_property_wrapper{
+  padding: 0px;
+  width: 100%;
+}
+
+.search-select-submit {
+  display: flex;
+  justify-content: center;
+  margin-left: 25%;
+  margin-top: 7px;
+}
+
+.heading-flex{
+  // display:flex;
+  // flex-direction:row;
+  background-color: #f4c45e;
+}
+
+.home-logo{
+  content: url(http://i.imgur.com/e6ZMPCc.jpg);
+  height: 81px;
+  margin: 0;
+  padding: 0;
+}
+
+.search-bar {
+  box-shadow: inset 1px 1px 5px rgba(0, 0, 0, 0.5);
+  background-color: #f4c45e;
+  border: 1px solid #e5ac38;
+  height: 40px;
+  width: 140px;
+  border-radius: 7px;
+  color: white;
+  font-size: 18px;
+  text-align: center;
+  /* display: flex; */
+  margin: 0;
+  outline: none;
+  autocomplete: off;
+}
+
+.heading-btn {
+  margin-left: 5px;
+}
+
+.search-bar::-webkit-input-placeholder {
+   color: white;
 }
