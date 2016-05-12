@@ -41,19 +41,33 @@ $light-yellow: #FBCA41;
 }
 
 .title {
+
 	color: black;
+	// border: 1px solid red;
 	border-radius: 5px;
 	text-align: center;
 	padding: 10px;
+	padding-top: 35px;
+	height: 330px;
+}
 
-	height: 300px;
+#my-dash-logo {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-content: center;
+
+}
+#my-dash-logo img {
+	width: 400px;
+	height: 330px;
 }
 
 .divider{
 	height: .75px;
-	width: 550px;
+	width: 400px;
 	border-bottom: 1.5px solid lighten(black, 20%);
-	margin: 35px auto 75px auto;
+	margin: 0px auto 35px auto;
 }
 
 #link {
@@ -114,11 +128,14 @@ $light-yellow: #FBCA41;
 		
 	}
 	.cabin-info-id {
+		// border: 1px solid red; 
 		color: gray;
 		font-family: Arial;
 		font-size: .60em;
-		text-decoration: none !important;
 		color: black;
+		a {
+			text-decoration: none !important;
+		}
 		
 	}
 }
@@ -164,6 +181,14 @@ $light-yellow: #FBCA41;
 }
 
 //style properties boxes individually
+//My Properties title
+#my-props-subtitle {
+	text-align: center;
+	color: black;
+	font-weight: lighter;
+	letter-spacing: .8px;
+	margin-bottom: -15px;
 
+}
 
 
