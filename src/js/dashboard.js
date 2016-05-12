@@ -22,17 +22,15 @@ export default class Dashboard extends Component {
 		return(
 			<div>
 				<div className='dash-background'>
-					<div className='title'>
-						<h1> My Dashboard </h1>
-					</div>
+					
+
+					<AllPropertiesView/>
 
 					<div className='center-me'>
 						<Link to='/create-new-listing' className='new-listing' id='link'> 
 							Create New Listing 
 						</Link>
 					</div>
-
-					<AllPropertiesView/>
 
 					<button onClick={::this.logoutHandler} className='button-regular'>Log Out</button>
 				</div>
@@ -44,7 +42,6 @@ export default class Dashboard extends Component {
 
 }
 
-// <button className='button-regular'>Account</button>
-// <button className='button-regular'>Profile Information</button>
-// <button className='button-regular'>All Property Listings</button>
-// <button className='button-regular'>Contact Us</button>
+// <div className='title'>
+// 						<h1> My Dashboard </h1>
+// 					</div>

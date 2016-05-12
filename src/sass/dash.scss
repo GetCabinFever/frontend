@@ -1,3 +1,5 @@
+$light-yellow: #FBCA41;
+
 @mixin button-emphasis {
 	color: black;
 	background-color: lighten(gray, 20%);
@@ -25,7 +27,7 @@
 }
 
 .dash-background {
-	  background-image: url(http://i.imgur.com/X2yYM3G.jpg);
+	  background-image: url(http://i.imgur.com/xOJK4LZ.png);
 	  background-size: cover;
 	  background-position: 30% 50%;
 	  box-shadow: inset 7px 10px 30px rgba(0, 0, 0, 0.5);
@@ -34,7 +36,7 @@
 .aboutme-top-dash {
   background-color: #2a5371;
   width: 100%;
-  height: 400px;
+  height: 200px;
   box-shadow: inset 3px 10px 10px rgba(0, 0, 0, 0.5);
 }
 
@@ -43,11 +45,24 @@
 	border-radius: 5px;
 	text-align: center;
 	padding: 10px;
+
+	height: 300px;
+}
+
+.divider{
+	height: .75px;
+	width: 550px;
+	border-bottom: 1.5px solid lighten(black, 20%);
+	margin: 35px auto 75px auto;
 }
 
 #link {
-	border: .5px solid black;
+	// border: .5px solid black;
+	margin-top: 35px;
 	text-decoration: none;
+	color: white;
+	background-color: lighten($light-yellow, 20%);
+	text-shadow: 1px 1px 2px lighten(black, 10%);
 }
 
 .center-me {
@@ -66,39 +81,89 @@
 }
 
 .cabin {
-	height: 330px;
-	width: 330px;
+	height: 225px;
+	width: 210px;
 	margin: 30px 30px;
-	border: .25px solid black;
-  	border-radius: 10px;
+	// border: .25px solid black;
+  	border-radius: 5px;
   	background: lighten(gray, 55%);
   	margin: 30px;
   	text-align: center;
 }
 
 .cabin-info {
+	// display: flex;
+	// align-content: center;
 	div {
-		margin: 5px 5px 5px 5px;
+		// margin: 5px 5px 5px 5px;
 	}
 	img{
-		height: 230px;
-		width: 230px;
+		height: 180px;
+		width: 210px;
 		margin: 0 auto;
-		border-radius: 10px;
+		border-radius: 5px;
 	}
 	.cabin-info-title {
+		color: gray;
 		font-family: Arial; 
-		text-decoration: none;
+		font-size: .8em;
+		// font-weight: bolder;
+		text-decoration: none !important;
 		text-align: center;
 		color: black;
+		
 	}
 	.cabin-info-id {
+		color: gray;
 		font-family: Arial;
-		font-size: 10px;
-		text-decoration: none;
+		font-size: .60em;
+		text-decoration: none !important;
 		color: black;
+		
 	}
 }
+
+.title-id-number-line {
+	// border: 1px solid red;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	padding: 3px 3px 0px 3px;
+}
+
+////delete button in cabin view
+.delete-property-div {
+	// border: 1px solid red;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	padding: 3px;
+}
+
+#delete-btn-cabin-property{
+	background-color: lighten(black, 35%);
+	color: white;
+	border: none !important;
+	// margin: 2.5px !important;
+	border-radius: 3px;
+	font-size: .5em;
+}
+
+////yellow properties box
+
+.properties {
+	// border: 1px solid red;
+	height: 290px;
+	width: 800px;
+	border-radius: 10px;
+	background-color: lighten($light-yellow, 20%);
+	overflow: scroll; 
+	margin: 10px auto 10px auto;
+	padding: 5px 20px 5px 20px;
+
+}
+
+//style properties boxes individually
 
 
 
