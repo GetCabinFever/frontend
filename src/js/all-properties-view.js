@@ -63,9 +63,9 @@ export default class AllPropertiesView extends Component {
 		return (
 			<div>
 
-				<div className='title'>
-					<h2>My Properties</h2>
-				</div>
+				<div className='title'></div>
+
+				<div className='divider'></div>
 
 				<div className='properties center-me'>
 					{ this.state.properties.map(::this.createResults) }
@@ -75,6 +75,9 @@ export default class AllPropertiesView extends Component {
 	}
 
 }
+
+//<h2>My Properties</h2>
+
 //FIX ME 
 //<Link to={`/edit-listing/${property.id}`}> Edit Listing </Link>
 

@@ -22,9 +22,7 @@ export default class Dashboard extends Component {
 		return(
 			<div>
 				<div className='dash-background'>
-					<div className='title'>
-						<h1> My Dashboard </h1>
-					</div>
+					
 
 					<AllPropertiesView/>
 
@@ -43,3 +41,7 @@ export default class Dashboard extends Component {
 	}
 
 }
+
+// <div className='title'>
+// 						<h1> My Dashboard </h1>
+// 					</div>
