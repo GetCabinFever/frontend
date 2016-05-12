@@ -80,8 +80,10 @@ export default class GuestBook extends Component {
 							<button onClick={::this.leftClickHandler}className="gb-left-btn"><Icon type="arrow-left"/></button>				
 							<button onClick={::this.rightClickHandler}className="gb-right-btn"><Icon type="arrow-right"/></button>
 						</div>
-				<Link to={`/guest-book-builder/${cabininfo.residence.id}`}><button className="gb-sign-btn">Sign My Guestbook</button></Link>	
+					<Link to={`/guest-book-builder/${cabininfo.residence.id}`}><button className="gb-sign-btn">Sign My Guestbook</button></Link>	
+		
 				</div>
+
 			</div>
 
 		);

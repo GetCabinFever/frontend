@@ -37,9 +37,10 @@
 .search-bar {
   box-shadow: inset 1px 1px 5px rgba(0, 0, 0, 0.5);
   background-color: #f4c45e;
-  border: 1px solid #e5ac38;
+  border: 1px solid rgba(229, 172, 56, 0.3);
   height: 40px;
-  width: 140px;
+  border: none;
+  width: 220px;
   border-radius: 7px;
   color: white;
   font-size: 18px;
