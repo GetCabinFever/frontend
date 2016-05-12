@@ -1,3 +1,5 @@
+$light-yellow: #FBCA41;
+
 @mixin button-emphasis {
 	color: black;
 	background-color: lighten(gray, 20%);
@@ -46,8 +48,11 @@
 }
 
 #link {
-	border: .5px solid black;
+	// border: .5px solid black;
 	text-decoration: none;
+	color: white;
+	background-color: lighten($light-yellow, 20%);
+	text-shadow: 1px 2px 2px lighten(black, 20%);
 }
 
 .center-me {
@@ -66,39 +71,89 @@
 }
 
 .cabin {
-	height: 330px;
-	width: 330px;
+	height: 225px;
+	width: 210px;
 	margin: 30px 30px;
-	border: .25px solid black;
-  	border-radius: 10px;
+	// border: .25px solid black;
+  	border-radius: 5px;
   	background: lighten(gray, 55%);
   	margin: 30px;
   	text-align: center;
 }
 
 .cabin-info {
+	// display: flex;
+	// align-content: center;
 	div {
-		margin: 5px 5px 5px 5px;
+		// margin: 5px 5px 5px 5px;
 	}
 	img{
-		height: 230px;
-		width: 230px;
+		height: 180px;
+		width: 210px;
 		margin: 0 auto;
-		border-radius: 10px;
+		border-radius: 5px;
 	}
 	.cabin-info-title {
+		color: gray;
 		font-family: Arial; 
-		text-decoration: none;
+		font-size: .8em;
+		// font-weight: bolder;
+		text-decoration: none !important;
 		text-align: center;
 		color: black;
+		
 	}
 	.cabin-info-id {
+		color: gray;
 		font-family: Arial;
-		font-size: 10px;
-		text-decoration: none;
+		font-size: .60em;
+		text-decoration: none !important;
 		color: black;
+		
 	}
 }
+
+.title-id-number-line {
+	// border: 1px solid red;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	padding: 3px 3px 0px 3px;
+}
+
+////delete button in cabin view
+.delete-property-div {
+	// border: 1px solid red;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	padding: 3px;
+}
+
+#delete-btn-cabin-property{
+	background-color: lighten(black, 35%);
+	color: white;
+	border: none !important;
+	// margin: 2.5px !important;
+	border-radius: 3px;
+	font-size: .5em;
+}
+
+////yellow properties box
+
+.properties {
+	// border: 1px solid red;
+	height: 290px;
+	width: 800px;
+	border-radius: 10px;
+	background-color: lighten($light-yellow, 20%);
+	overflow: scroll; 
+	margin: 10px auto 10px auto;
+	padding: 5px 20px 5px 20px;
+
+}
+
+//style properties boxes individually
 
 
 

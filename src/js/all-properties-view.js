@@ -42,14 +42,16 @@ export default class AllPropertiesView extends Component {
 			<div key={ property.id } className="cabin">
 				<Link to={ `/generate_new/${property.id}` }>
 					<div className='cabin-info'>
-						<div className='cabin-info-title'>{ property.title }</div>
-						<div className='cabin-info-id'>{ property.id }</div>
 						<div className='center-me'><img src={ property.image } /></div>
+							<div className='title-id-number-line'>
+								<div className='cabin-info-title'>{ property.title }</div>
+								<div className='cabin-info-id'>{ property.id }</div>
+							</div>
 					</div>
 				</Link>
 
-				<div>
-				<button onClick={ this.deleteHandler.bind(this, property) } className='button-regular-sm center-me'> Delete </button>
+				<div className='delete-property-div'>
+				<div><button onClick={ this.deleteHandler.bind(this, property) } className='button-regular-sm center-me' id='delete-btn-cabin-property'> Delete </button></div>
 				</div>
 
 			</div>
@@ -77,3 +79,25 @@ export default class AllPropertiesView extends Component {
 //<Link to={`/edit-listing/${property.id}`}> Edit Listing </Link>
 
 //<button onClick={ this.EditListing.bind(this, property) }> Edit </button>
+
+//<div key={ property.id } className="cabin">
+				//<Link to={ `/generate_new/${property.id}` }>
+					//<div className='cabin-info'>
+						//<div className='center-me'><img src={ property.image } /></div>
+							//<div className='title-id-number-line'>
+								//<div className='cabin-info-title'>{ property.title }</div>
+								//<div className='cabin-info-id'>{ property.id }</div>
+							//</div>
+					//</div>
+				//</Link>
+
+				//<div className='delete-property-div'>
+				//<div><button onClick={ this.deleteHandler.bind(this, property) } className='button-regular-sm center-me' id='delete-btn-cabin-property'> Delete </button></div>
+				//</div>
+
+			//</div>
+
+
+
+
+
