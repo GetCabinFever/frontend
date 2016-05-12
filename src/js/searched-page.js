@@ -50,8 +50,8 @@ export default class SearchedPage extends Component {
 			<div className="searched-wrapper">
 					<div className="searched-img-div"> 
 						<img className="searched-img" src={response.image}/>
-						<div className="searched-title">{response.title}</div> 
 						<div className="searched-price">Price: ${response.price}</div>
+						<div className="searched-title">{response.title}</div> 
 						<div className="searched-property">Property Type: {response.property_type}</div>
 					</div>
 			</div>	
