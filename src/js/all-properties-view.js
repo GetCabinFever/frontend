@@ -63,7 +63,12 @@ export default class AllPropertiesView extends Component {
 		return (
 			<div>
 
-				<div className='title'></div>
+				<div className='title'>
+					<div id='my-dash-logo'><img src="http://i.imgur.com/2E73mBG.png" /></div>
+				</div>
+
+
+				<div id='my-props-subtitle'><h3><span>My Properties</span></h3></div>
 
 				<div className='divider'></div>
 

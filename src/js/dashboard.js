@@ -23,6 +23,7 @@ export default class Dashboard extends Component {
 			<div>
 				<div className='dash-background'>
 					
+					<div ></div>
 
 					<AllPropertiesView/>
 
