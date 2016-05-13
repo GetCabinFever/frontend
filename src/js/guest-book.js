@@ -18,7 +18,7 @@ export default class GuestBook extends Component {
 			// def_entry: 'Click Sign My Guestbook to add a nice image and entry about your visited location!'
 	componentWillMount(){
 		if(this.props.cabininfo.guest_book.length < 1){
-			this.props.cabininfo.guest_book[0] = {image: 'http://fillmurray.com/100/100', entry: 'Click Sign My Guestbook to add a nice image and entry about your visited location!' }
+			this.props.cabininfo.guest_book[0] = {image: 'http://i.imgur.com/lFkPYhF.png', entry: 'Click Sign My Guestbook to add a nice image and entry about your visited location!' }
 		}
 	}
 
@@ -80,8 +80,10 @@ export default class GuestBook extends Component {
 							<button onClick={::this.leftClickHandler}className="gb-left-btn"><Icon type="arrow-left"/></button>				
 							<button onClick={::this.rightClickHandler}className="gb-right-btn"><Icon type="arrow-right"/></button>
 						</div>
-				<Link to={`/guest-book-builder/${cabininfo.residence.id}`}><button className="gb-sign-btn">Sign My Guestbook</button></Link>	
+					<Link to={`/guest-book-builder/${cabininfo.residence.id}`}><button className="gb-sign-btn">Sign My Guestbook</button></Link>	
+		
 				</div>
+
 			</div>
 
 		);

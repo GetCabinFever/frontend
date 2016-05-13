@@ -50,14 +50,14 @@ export default class GuestBookBuilder extends Component {
 			<div className="gb-form-wrapper">
 
 				<Dropzone className="dropzone" onDrop={::this.dropHandler}>
-					<label className="main-label"> Guest Book Photo <br/> </label>
+					<label className="main-label"> Add A Guest Book Photo <br/> </label>
 					<input type="hidden" value={this.state.preview} name="image"/>
 					<img className="dropzone-img" src={this.state.preview}/>
 				</Dropzone> 
 
 
 				<div className="gb_note">
-					<span className="main-label">Guest Book Entry</span><br/>
+					<span className="main-label">Sign The Guest Book Entry</span><br/>
 					<textarea className="form-textarea" name="entry" placeholder="Thank the host with some kind words."> 
 						
 					</textarea>

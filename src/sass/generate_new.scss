@@ -110,24 +110,26 @@
 }
 
 .gb-main-wrapper {
-	display: flex;
+	// display: flex;
 }
 
 .gb-and-entry {
-	display: flex;
-}
+  display: flex;
+  flex-direction: column;
+  align-items: center;}
 
 .gb-img {
-  width: 300px;
+  width: 500px;
   height: 250px;
+  object-fit: cover;
 }
 
 .gb-entry {
   background: white;
   padding: 0px;
-  padding-top: 100px;
-  width: 300px;
-  height: 150px;
+  /* padding-top: 100px; */
+  width: 500px;  
+  /* height: 150px; */
   text-align: center;
   border: 1px solid black;
 }
@@ -138,8 +140,7 @@
 }
 
 .gb-sign-btn {
-	background-color: #6ccafb;
-  height: 252px;	
+  background-color: #6ccafb;
   border: 2px solid #3696c2;
 }
 

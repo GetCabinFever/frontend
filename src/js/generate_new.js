@@ -146,7 +146,7 @@ export default class GenerateNew extends Component {
 					</div>					
 
 					<div className="gen_other_things_note">
-						<p>Other Things To Note: {cabininfo.residence.other_things_to_note}</p>
+						<p style={{margin: 0}}>Other Things To Note: {cabininfo.residence.other_things_to_note}</p>
 					</div>
 
 

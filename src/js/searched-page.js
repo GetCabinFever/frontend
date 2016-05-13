@@ -81,11 +81,12 @@ export default class SearchedPage extends Component {
 
 			<div className="searched-page-wrapper">
 
-				<div>
-				<h1 className="search-title"> Search Results </h1> 
-				</div>
-
 				<div className="searched-flexme">
+				
+					<div>
+						<h1 className="search-title"> Search Results </h1> 
+					</div>
+
 					{this.getResults()}
 				</div>
 
